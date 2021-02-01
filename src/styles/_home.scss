@@ -84,12 +84,14 @@ button.join:hover {
 }
 
 .window-card {
-	width: 80vw;
-	height: fit-content;
+	width: 60vw;
+	min-height: fit-content;
+	height: 60vh;
 	background: $acm-gray;
 	border-radius: 20px;
 	box-shadow: 2px 4px 7px 0px rgba(0, 0, 0, 0.15);
 	overflow: hidden;
+	margin: 3rem 0;
 
 	&-top-menu {
 		height: 65px;
@@ -107,6 +109,28 @@ button.join:hover {
 		}
 		.green-circle {
 			@include window-card-circles($acm-green);
+		}
+	}
+
+	&-texts {
+		padding: 1.5rem;
+
+		&-title {
+			font-weight: 600;
+			font-size: 48px;
+			font-family: $acm-font;
+			margin-bottom: 0.5rem;
+
+			span {
+				color: $acm-blue;
+				font-family: $acm-font;
+			}
+		}
+
+		&-body {
+			font-size: 24px;
+			font-weight: 400;
+			line-height: 35px;
 		}
 	}
 }

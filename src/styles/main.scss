@@ -50,6 +50,9 @@ button {
 	padding: 0.5rem 1rem;
 	cursor: pointer;
 }
+.bold {
+	font-weight: bold;
+}
 
 // ====== MIXINS =========
 @mixin window-card-circles($color) {

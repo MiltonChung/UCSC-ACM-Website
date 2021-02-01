@@ -15,13 +15,19 @@ const Home = () => {
 				</div>
 				<div className="window-card-texts">
 					<h3 className="window-card-texts-title">
-						work<span>shops</span>
+						<span>work</span>shops
 					</h3>
 					<p className="window-card-texts-body">
 						We know how hard it can be to learn new skills and technologies apart from those taught in
-						classes. That’s why we host a variety of workshops for different career paths in computer
-						science. In the past we’ve held workshops on preparing for coding interviews, getting familiar
-						with machine learning, and building your own portfolio website.
+						classes.{" "}
+						<span className="bold">
+							That’s why we host a variety of workshops for different career paths in computer science.
+						</span>{" "}
+						In the past we’ve held workshops on{" "}
+						<span className="bold">
+							preparing for coding interviews, getting familiar with machine learning, and building your
+							own portfolio website.
+						</span>
 					</p>
 				</div>
 			</article>
