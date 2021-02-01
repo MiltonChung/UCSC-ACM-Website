@@ -1,0 +1,21 @@
+// Font import
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Oswald:wght@200;300;400;500;600;700&display=swap");
+@import "react-big-calendar/lib/sass/styles";
+
+// ========= COLORS =========
+// Main Color Palette
+$light-red: #ea526f;
+$dark-black: #070600;
+$lighter-gray: #f7f7ff;
+$blue: #0093d0;
+$yellow: #ffbb43;
+
+// Extra/Accent Colors
+$light-gray: #ececf6;
+$light-green: #8af688;
+
+@import "aboutus";
+@import "contact";
+@import "events";
+@import "home";
+@import "resources";
