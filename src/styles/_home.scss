@@ -83,10 +83,19 @@ button.join:hover {
 	border: 5px white solid;
 }
 
+.window-cards-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
 .window-card {
 	width: 60vw;
-	min-height: fit-content;
-	height: 60vh;
+	min-height: 500px;
+	max-height: 80vh;
 	background: $acm-gray;
 	border-radius: 20px;
 	box-shadow: 2px 4px 7px 0px rgba(0, 0, 0, 0.15);
@@ -110,6 +119,11 @@ button.join:hover {
 		.green-circle {
 			@include window-card-circles($acm-green);
 		}
+		.red-circle:hover,
+		.yellow-circle:hover,
+		.green-circle:hover {
+			opacity: 0.8;
+		}
 	}
 
 	&-texts {
@@ -131,6 +145,29 @@ button.join:hover {
 			font-size: 24px;
 			font-weight: 400;
 			line-height: 35px;
+		}
+	}
+
+	&-button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-top: 1rem;
+		padding-bottom: 3rem;
+
+		button {
+			background: $acm-black;
+			font-size: 33px;
+			font-weight: 400;
+			color: $acm-white;
+			padding: 0.5rem 3rem;
+			border: 3px $acm-black solid;
+			transition: all 0.5s;
+			box-shadow: 0px 5px 20px 8px rgba(7, 6, 0, 0.25);
+		}
+		button:hover {
+			color: $acm-black;
+			background: $acm-gray;
 		}
 	}
 }
