@@ -64,8 +64,19 @@ button {
 	margin-right: 0.5rem;
 }
 
+@mixin svg-placer($top, $bottom, $left, $right) {
+	position: absolute;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+	z-index: 1;
+}
+
 @import "aboutus";
 @import "contact";
 @import "events";
 @import "home";
 @import "resources";
+@import "footer";
+@import "nav";

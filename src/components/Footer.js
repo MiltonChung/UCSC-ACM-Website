@@ -1,9 +1,11 @@
 import React from "react";
+// Image
+import Logo from "../images/dark-logo.svg";
 
 const Footer = () => {
 	return (
-		<div>
-			<p>footer</p>
+		<div className="footer">
+			<img src={Logo} alt="logo" />
 		</div>
 	);
 };

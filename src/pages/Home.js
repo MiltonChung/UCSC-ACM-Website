@@ -1,7 +1,14 @@
 import React from "react";
 // Components
 import Landing from "../components/Landing";
-import doubleLines from "../images/double-lines.svg";
+import Footer from "../components/Footer";
+// Svg
+import CircleO from "../images/circle-o.svg";
+import Circle from "../images/circle.svg";
+import Cursor from "../images/cursor.svg";
+import DoubleLines from "../images/double-lines.svg";
+import DoubleLinesDot from "../images/double-lines-dot.svg";
+import TripleLines from "../images/triple-lines.svg";
 
 const Home = () => {
 	return (
@@ -9,6 +16,17 @@ const Home = () => {
 			<Landing />
 			<button className="join">Join Us</button>
 			<div className="window-cards-container">
+				<img className="svg-1" src={CircleO} alt="circleo" />
+				<img className="svg-2" src={TripleLines} alt="tripleLines" />
+				<img className="svg-3" src={DoubleLinesDot} alt="lines" />
+				<img className="svg-4" src={DoubleLinesDot} alt="lines" />
+				<img className="svg-5" src={CircleO} alt="circleo" />
+				<img className="svg-6" src={TripleLines} alt="tripleLines" />
+				<img className="svg-7" src={CircleO} alt="circleo" />
+				<img className="svg-8" src={CircleO} alt="circleo" />
+				<img className="svg-9" src={DoubleLines} alt="lines" />
+				<img className="svg-10" src={Circle} alt="circle" />
+
 				<article className="window-card">
 					<div className="window-card-top-menu">
 						<div className="red-circle"></div>
@@ -43,6 +61,7 @@ const Home = () => {
 					</div>
 					<div className="window-card-texts">
 						<h3 className="window-card-texts-title">
+							<img src={Cursor} alt="cursor" />
 							company <span>tours</span> & guest <span>speakers</span>
 						</h3>
 						<p className="window-card-texts-body">
@@ -132,8 +151,6 @@ const Home = () => {
 						<button>Submit</button>
 					</div>
 				</article>
-
-				<img src={doubleLines} alt="lines" />
 			</div>
 		</div>
 	);
