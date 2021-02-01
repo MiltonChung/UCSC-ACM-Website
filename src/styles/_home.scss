@@ -1,0 +1,112 @@
+// Home
+.home {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+// Landing component
+.landing {
+	background: url("../images/background-banner.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	min-height: 80vh;
+	height: fit-content;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+
+	&-texts {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		color: white;
+		width: 50%;
+		margin: 0 auto;
+		padding: 2rem 0;
+
+		&-logo {
+			width: 100px;
+			height: auto;
+		}
+
+		&-title {
+			font-weight: 600;
+			font-size: 96px;
+			span {
+				color: $acm-blue;
+				font-family: $acm-font;
+			}
+		}
+
+		&-subtitle {
+			font-size: 20px;
+			font-style: italic;
+			font-weight: 400;
+			line-height: 24px;
+			text-align: center;
+			margin: 1rem 0 2rem 0;
+		}
+
+		&-description {
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 24px;
+			text-align: center;
+		}
+	}
+}
+
+button.join {
+	font-size: 33px;
+	font-weight: 400;
+	text-align: center;
+	height: 77.53401184082031px;
+	width: 235px;
+	background: $acm-gray;
+	border: 5px $acm-gray solid;
+	box-shadow: 2px 4px 20px 0px rgba(0, 0, 0, 0.1);
+	margin-top: -2.5rem;
+	text-decoration: underline;
+	color: $acm-pink;
+	transition: all 0.5s;
+}
+
+button.join:hover {
+	background: $acm-pink;
+	color: $acm-gray;
+	border: 5px white solid;
+}
+
+.window-card {
+	width: 80vw;
+	height: fit-content;
+	background: $acm-gray;
+	border-radius: 20px;
+	box-shadow: 2px 4px 7px 0px rgba(0, 0, 0, 0.15);
+	overflow: hidden;
+
+	&-top-menu {
+		height: 65px;
+		background: $acm-black;
+		display: flex;
+		align-items: center;
+
+		padding-left: 1.2rem;
+
+		.red-circle {
+			@include window-card-circles($acm-pink);
+		}
+		.yellow-circle {
+			@include window-card-circles($acm-yellow);
+		}
+		.green-circle {
+			@include window-card-circles($acm-green);
+		}
+	}
+}

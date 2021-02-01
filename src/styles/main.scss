@@ -1,18 +1,65 @@
-// Font import
+// Imports
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Oswald:wght@200;300;400;500;600;700&display=swap");
 @import "react-big-calendar/lib/sass/styles";
 
+// ========= FONTS =========
+$acm-font: "Oswald", sans-serif;
+$acm-secondary-font: "Lato", sans-serif;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $acm-font;
+}
+
+p,
+a,
+span,
+button {
+	font-family: $acm-secondary-font;
+}
+
 // ========= COLORS =========
 // Main Color Palette
-$light-red: #ea526f;
-$dark-black: #070600;
-$lighter-gray: #f7f7ff;
-$blue: #0093d0;
-$yellow: #ffbb43;
+$acm-pink: #ea526f;
+$acm-black: #070600;
+$acm-white: #f7f7ff;
+$acm-blue: #0093d0;
+$acm-yellow: #ffbb43;
 
 // Extra/Accent Colors
-$light-gray: #ececf6;
-$light-green: #8af688;
+$acm-gray: #ececf6;
+$acm-green: #8af688;
+
+// ======== RESETS =========
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+// ====== COMPONENTS =========
+button {
+	width: fit-content;
+	border-radius: 50px;
+	outline: none;
+	border: none;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+}
+
+// ====== MIXINS =========
+@mixin window-card-circles($color) {
+	background: $color;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	transform: translateY(10%);
+	margin-right: 0.5rem;
+}
 
 @import "aboutus";
 @import "contact";

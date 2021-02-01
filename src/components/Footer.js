@@ -1,11 +1,11 @@
 import React from "react";
 
-const Events = () => {
+const Footer = () => {
 	return (
 		<div>
-			<p>events</p>
+			<p>footer</p>
 		</div>
 	);
 };
 
-export default Events;
+export default Footer;
