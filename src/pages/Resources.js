@@ -83,157 +83,168 @@ const Resources = () => {
 				<h3>
 					😎 getting that <span className="font-blue">dream</span> internship or job 😎
 				</h3>
-				<p>Fill this out!</p>
-				<p>
-					Start by filling out this worksheet to figure out what you want your ideal career to look like.
-				</p>
+				<p className="bold">Fill this out!</p>
+				<div className="answer">
+					<p>
+						Start by filling out this worksheet to figure out what you want your ideal career to look
+						like.
+					</p>
+				</div>
 
 				{/* Section */}
-				<h4>Resume and Cover Letters Advice</h4>
-				<p>
-					Time to perfect your resume and cover letters, here's advice straight from recruiters themselves
-					and a template for cold emails to get you started.
-				</p>
-				<ul>
-					<li>
-						<img src={Arrow} alt="arrow" />
-						<a href="/" target="_blank" rel="noopener noreferrer">
-							Resume
-						</a>
-					</li>
-					<li>
-						<img src={Arrow} alt="arrow" />
-						<a href="/" target="_blank" rel="noopener noreferrer">
-							Cover Letter
-						</a>
-					</li>
-					<li>
-						<img src={Arrow} alt="arrow" />
-						<p>Cold Emails</p>
-					</li>
-				</ul>
-				<p>Now you’re ready to learn more about the interview process!</p>
-				<p>
-					Here’s a good overview, a more detailed overview, and advice from a UCSC ACM Alumni that works at
-					Microsoft now.
-				</p>
+				<p className="bold">Resume and Cover Letters Advice</p>
+				<div className="answer">
+					<p>
+						Time to perfect your resume and cover letters, here's advice straight from recruiters
+						themselves and a template for cold emails to get you started.
+					</p>
+					<ul>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<a href="/" target="_blank" rel="noopener noreferrer">
+								Resume
+							</a>
+						</li>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<a href="/" target="_blank" rel="noopener noreferrer">
+								Cover Letter
+							</a>
+						</li>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<p>Cold Emails</p>
+						</li>
+					</ul>
+					<p>Now you’re ready to learn more about the interview process!</p>
+					<p>
+						Here’s a good overview, a more detailed overview, and advice from a UCSC ACM Alumni that works
+						at Microsoft now.
+					</p>
+				</div>
 
 				{/* Section */}
-				<h4>Side Projects!</h4>
-				<p>They probably mentioned having side projects, here are some great ways to start one:</p>
-				<ul>
-					<li>
-						<img src={Arrow} alt="arrow" />
-						<p>Our project programs</p>
-					</li>
-					<li>
-						<img src={Arrow} alt="arrow" />
-						<p>
-							Hackathons! You can find a list of all the MLH hackathons here. (most of them will be
-							online this year). We even have a UCSC one, CruzHacks!
-						</p>
-					</li>
-					<li>
-						<img src={Arrow} alt="arrow" />
-						<p>Some other ideas for inspiration</p>
-					</li>
-				</ul>
+				<p className="bold">Side Projects!</p>
+				<div className="answer">
+					<p>They probably mentioned having side projects, here are some great ways to start one:</p>
+					<ul>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<p>Our project programs</p>
+						</li>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<p>
+								Hackathons! You can find a list of all the MLH hackathons here. (most of them will be
+								online this year). We even have a UCSC one, CruzHacks!
+							</p>
+						</li>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<p>Some other ideas for inspiration</p>
+						</li>
+					</ul>
+				</div>
 
 				{/* Section */}
-				<h4>Technical Prep</h4>
-				<p>You can find some more detailed information about technical prep here.</p>
-				<p>
-					We recommend going through this book, Cracking the Coding Interview, and practicing coding
-					questions here:
-				</p>
-				<ul>
-					<li>
-						<img src={Arrow} alt="arrow" />
-						<p>CECI Fair</p>
-					</li>
-					<li>
-						<img src={Arrow} alt="arrow" />
-						<p>LinkedIn</p>
-					</li>
-					<li>
-						<img src={Arrow} alt="arrow" />
-						<p>Jumpstart</p>
-					</li>
-					<li>
-						<img src={Arrow} alt="arrow" />
-						<p>Handshake</p>
-					</li>
-					<li>
-						<img src={Arrow} alt="arrow" />
-						<p>BSOE Newsletter</p>
-					</li>
-					<li>
-						<img src={Arrow} alt="arrow" />
-						<p>Piazza</p>
-					</li>
-					<li>
-						<img src={Arrow} alt="arrow" />
-						<p>Cold Emails</p>
-					</li>
-					<li>
-						<img src={Arrow} alt="arrow" />
-						<a href="/">Big List of Companies</a>
-					</li>
-					<li>
-						<img src={Arrow} alt="arrow" />
-						<a href="/">Another Big List</a>
-					</li>
-				</ul>
-				<p>
-					Don't worry if you’re a first or second year, you can still apply! Here’s a list of fellowships
-					tailored just for you:
-				</p>
-				<ul>
-					<li>
-						<img src={Arrow} alt="arrow" />
-						<a href="/" target="_blank" rel="noopener noreferrer">
-							Andreesson Horowitz
-						</a>
-					</li>
-					<li>
-						<img src={Arrow} alt="arrow" />
-						<a href="/" target="_blank" rel="noopener noreferrer">
-							Kleiner Perkins
-						</a>
-					</li>
-					<li>
-						<img src={Arrow} alt="arrow" />
-						<a href="/" target="_blank" rel="noopener noreferrer">
-							Sequoia
-						</a>
-					</li>
-				</ul>
+				<p className="bold">Technical Prep</p>
+				<div className="answer">
+					<p>You can find some more detailed information about technical prep here.</p>
+					<p>
+						We recommend going through this book, Cracking the Coding Interview, and practicing coding
+						questions here:
+					</p>
+					<ul>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<p>CECI Fair</p>
+						</li>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<p>LinkedIn</p>
+						</li>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<p>Jumpstart</p>
+						</li>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<p>Handshake</p>
+						</li>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<p>BSOE Newsletter</p>
+						</li>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<p>Piazza</p>
+						</li>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<p>Cold Emails</p>
+						</li>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<a href="/">Big List of Companies</a>
+						</li>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<a href="/">Another Big List</a>
+						</li>
+					</ul>
+					<p>
+						Don't worry if you’re a first or second year, you can still apply! Here’s a list of
+						fellowships tailored just for you:
+					</p>
+					<ul>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<a href="/" target="_blank" rel="noopener noreferrer">
+								Andreesson Horowitz
+							</a>
+						</li>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<a href="/" target="_blank" rel="noopener noreferrer">
+								Kleiner Perkins
+							</a>
+						</li>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<a href="/" target="_blank" rel="noopener noreferrer">
+								Sequoia
+							</a>
+						</li>
+					</ul>
+				</div>
 
 				{/* Section */}
-				<h4>Ugh! There are so many companies; how do I keep track of them all?</h4>
-				<p>We recommend using these:</p>
-				<ul>
-					<li>
-						<img src={Arrow} alt="arrow" />
-						<p>Huntr.co </p>
-					</li>
-					<li>
-						<img src={Arrow} alt="arrow" />
-						<p>Airtable</p>
-					</li>
-					<li>
-						<img src={Arrow} alt="arrow" />
-						<p>Trello</p>
-					</li>
-					<li>
-						<img src={Arrow} alt="arrow" />
-						<p>Google Sheets + Excel</p>
-					</li>
-				</ul>
+				<p className="bold">Ugh! There are so many companies; how do I keep track of them all?</p>
+				<div className="answer">
+					<p>We recommend using these:</p>
+					<ul>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<p>Huntr.co </p>
+						</li>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<p>Airtable</p>
+						</li>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<p>Trello</p>
+						</li>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<p>Google Sheets + Excel</p>
+						</li>
+					</ul>
+				</div>
 
 				{/* Section */}
 				<h3>
-					🎉<span>congratulations!</span> you got the job 🎉
+					🎉<span className="font-blue">congratulations!</span> you got the job 🎉
 				</h3>
 			</div>
 		</div>

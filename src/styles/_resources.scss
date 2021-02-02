@@ -37,16 +37,10 @@
 	justify-content: center;
 
 	h2 {
-		font-size: 64px;
-		line-height: 45px;
-		font-weight: 600;
 		margin-top: 3rem;
 	}
 
 	h3 {
-		font-size: 48px;
-		line-height: 35px;
-		font-weight: 600;
 		margin-top: 10rem;
 		margin-bottom: 3rem;
 		text-align: center;
@@ -55,7 +49,7 @@
 	p {
 		font-size: 36px;
 		font-weight: 400;
-		line-height: 35px;
+		line-height: 50px;
 		margin-bottom: 2rem;
 	}
 	p.bold {
@@ -94,10 +88,16 @@
 			img {
 				margin-right: 1rem;
 			}
+			p {
+				margin: 0;
+			}
 		}
 	}
 
-	.survive {
+	.survive,
+	.dream-job {
 		width: 80%;
+		position: relative;
+		z-index: 5;
 	}
 }

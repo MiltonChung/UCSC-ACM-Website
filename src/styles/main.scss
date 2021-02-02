@@ -2,6 +2,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Oswald:wght@200;300;400;500;600;700&display=swap");
 @import "react-big-calendar/lib/sass/styles";
 
+// ========= COLORS =========
+// Main Color Palette
+$acm-pink: #ea526f;
+$acm-black: #070600;
+$acm-white: #f7f7ff;
+$acm-blue: #0093d0;
+$acm-yellow: #ffbb43;
+
+// Extra/Accent Colors
+$acm-gray: #ececf6;
+$acm-green: #8af688;
+
 // ========= FONTS =========
 $acm-font: "Oswald", sans-serif;
 $acm-secondary-font: "Lato", sans-serif;
@@ -14,6 +26,16 @@ h5,
 h6 {
 	font-family: $acm-font;
 }
+h2 {
+	font-size: 64px;
+	line-height: 45px;
+	font-weight: 600;
+}
+h3 {
+	font-size: 48px;
+	line-height: 35px;
+	font-weight: 600;
+}
 
 p,
 a,
@@ -22,17 +44,19 @@ small {
 	font-family: $acm-secondary-font;
 }
 
-// ========= COLORS =========
-// Main Color Palette
-$acm-pink: #ea526f;
-$acm-black: #070600;
-$acm-white: #f7f7ff;
-$acm-blue: #0093d0;
-$acm-yellow: #ffbb43;
-
-// Extra/Accent Colors
-$acm-gray: #ececf6;
-$acm-green: #8af688;
+a {
+	color: $acm-blue;
+	transition: all 0.25s;
+}
+a:active {
+	color: $acm-black;
+}
+a:hover {
+	color: $acm-pink;
+}
+a:visited {
+	color: rgb(104, 7, 104);
+}
 
 // ======== RESETS =========
 * {
