@@ -45,11 +45,24 @@ const AboutUs = () => {
 					<div className="bubble">
 						<p>
 							That’s great! To become a member, you can fill out{" "}
-							<a href="https://docs.google.com/forms/d/e/1FAIpQLSdQtcJtHljZQxD7LLw7Rmq2N8ISO8Xa2kblnPbiG11kvVxsEA/viewform">
+							<a
+								href="https://docs.google.com/forms/d/e/1FAIpQLSdQtcJtHljZQxD7LLw7Rmq2N8ISO8Xa2kblnPbiG11kvVxsEA/viewform"
+								target="_blank"
+								rel="noopener noreferrer">
 								this form
 							</a>{" "}
-							and join our <a href="https://www.facebook.com/groups/acmucsc">Facebook</a> and{" "}
-							<a href="https://ucsc-acm.slack.com/join/shared_invite/zt-4fwpvndh-NwAqvgdaFOyNbadEZvu4zA#/">
+							and join our{" "}
+							<a
+								href="https://www.facebook.com/groups/acmucsc"
+								target="_blank"
+								rel="noopener noreferrer">
+								Facebook
+							</a>{" "}
+							and{" "}
+							<a
+								href="https://ucsc-acm.slack.com/join/shared_invite/zt-4fwpvndh-NwAqvgdaFOyNbadEZvu4zA#/"
+								target="_blank"
+								rel="noopener noreferrer">
 								Slack
 							</a>{" "}
 							group to stay updated about our events or visit our events page. If you have any questions,
