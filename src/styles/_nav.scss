@@ -1,6 +1,6 @@
 nav {
 	background: #ececf6;
-	padding: 1.5rem 2rem;
+	padding: 1.2rem 2rem;
 
 	ul {
 		display: flex;
@@ -12,12 +12,19 @@ nav {
 		li {
 			margin-left: 3rem;
 			svg {
-				width: 35px;
+				width: 33px;
 				height: auto;
+				color: $acm-black;
+				transition: all 0.3s;
+			}
+			svg:hover {
+				color: $acm-pink;
 			}
 
 			a.selected {
-				color: $acm-pink;
+				svg {
+					color: $acm-pink;
+				}
 			}
 		}
 	}

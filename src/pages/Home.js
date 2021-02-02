@@ -1,7 +1,6 @@
 import React from "react";
 // Components
 import Landing from "../components/Landing";
-import Footer from "../components/Footer";
 // Svg
 import CircleO from "../images/circle-o.svg";
 import Circle from "../images/circle.svg";

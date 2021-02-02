@@ -53,6 +53,9 @@ button {
 .bold {
 	font-weight: bold;
 }
+.font-blue {
+	color: $acm-blue;
+}
 
 // ====== MIXINS =========
 @mixin window-card-circles($color) {

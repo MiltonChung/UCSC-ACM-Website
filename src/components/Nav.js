@@ -1,25 +1,13 @@
 import React from "react";
 // React Router
-import { Link, NavLink } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
 // Icons
-import { Icon, InlineIcon } from "@iconify/react";
+import { Icon } from "@iconify/react";
 import Home from "@iconify/icons-ant-design/home-outlined";
 import AboutUs from "@iconify/icons-fluent/people-team-16-filled";
 import Events from "@iconify/icons-ion/calendar-outline";
 import Resources from "@iconify/icons-ant-design/folder-open-filled";
 import Contact from "@iconify/icons-grommet-icons/contact";
-
-// import Home from "../images/nav-icons/home.svg";
-// import AboutUs from "../images/nav-icons/aboutus.svg";
-// import Events from "../images/nav-icons/events.svg";
-// import Resources from "../images/nav-icons/resources.svg";
-// import Contact from "../images/nav-icons/contact.svg";
-// import ClickedHome from "../images/nav-icons/clicked-home.svg";
-// import ClickedAboutUs from "../images/nav-icons/clicked-aboutus.svg";
-// import ClickedEvents from "../images/nav-icons/clicked-events.svg";
-// import ClickedResources from "../images/nav-icons/clicked-resources.svg";
-// import ClickedContact from "../images/nav-icons/clicked-contact.svg";
 
 const Nav = () => {
 	return (
