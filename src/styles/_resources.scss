@@ -1,33 +1,103 @@
+.svg-1 {
+	@include svg-placer(5%, unset, 5%, unset);
+}
+.svg-2 {
+	@include svg-placer(1%, unset, 15%, unset);
+}
+.svg-3 {
+	@include svg-placer(15%, unset, -2%, unset);
+}
+.svg-4 {
+	@include svg-placer(20%, unset, unset, 10%);
+}
+.svg-5 {
+	@include svg-placer(38%, unset, 5%, unset);
+}
+.svg-6 {
+	@include svg-placer(55%, unset, 16%, unset);
+}
+.svg-7 {
+	@include svg-placer(unset, 25%, 5%, unset);
+}
+.svg-8 {
+	@include svg-placer(unset, 35%, unset, 15%);
+}
+.svg-9 {
+	@include svg-placer(unset, 10%, 16%, unset);
+}
+.svg-10 {
+	@include svg-placer(unset, 1%, unset, 12%);
+}
+
 .resources {
 	position: relative;
-	.svg-1 {
-		@include svg-placer(5%, unset, 5%, unset);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	h2 {
+		font-size: 64px;
+		line-height: 45px;
+		font-weight: 600;
+		margin-top: 3rem;
 	}
-	.svg-2 {
-		@include svg-placer(1%, unset, 15%, unset);
+
+	h3 {
+		font-size: 48px;
+		line-height: 35px;
+		font-weight: 600;
+		margin-top: 10rem;
+		margin-bottom: 3rem;
+		text-align: center;
 	}
-	.svg-3 {
-		@include svg-placer(15%, unset, -2%, unset);
+
+	p {
+		font-size: 36px;
+		font-weight: 400;
+		line-height: 35px;
+		margin-bottom: 2rem;
 	}
-	.svg-4 {
-		@include svg-placer(20%, unset, unset, 10%);
+	p.bold {
+		margin-bottom: 0.5rem;
+		margin-top: 1.8rem;
+		font-weight: bold;
 	}
-	.svg-5 {
-		@include svg-placer(38%, unset, 5%, unset);
+	.answer {
+		margin-left: 1rem;
+		p {
+			font-size: 30px;
+		}
 	}
-	.svg-6 {
-		@include svg-placer(55%, unset, 16%, unset);
+
+	a {
+		font-size: 30px;
+		font-weight: 400;
+		line-height: 35px;
 	}
-	.svg-7 {
-		@include svg-placer(unset, 25%, 5%, unset);
+
+	ul {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 2rem;
+		margin-top: -1rem;
+		margin: -1rem 0 2rem 1.5rem;
+
+		li {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			width: fit-content;
+			margin-bottom: 1.3rem;
+
+			img {
+				margin-right: 1rem;
+			}
+		}
 	}
-	.svg-8 {
-		@include svg-placer(unset, 35%, unset, 15%);
-	}
-	.svg-9 {
-		@include svg-placer(unset, 10%, 16%, unset);
-	}
-	.svg-10 {
-		@include svg-placer(unset, 1%, unset, 12%);
+
+	.survive {
+		width: 80%;
 	}
 }
