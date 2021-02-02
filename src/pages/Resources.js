@@ -30,26 +30,41 @@ const Resources = () => {
 					<span className="font-blue">💪 surviving CS</span> at UCSC 💪
 				</h3>
 				<p>Need advice?</p>
-				<p>You can start by reading this advice from a fellow CS major. </p>
+				<p>
+					You can start by reading{" "}
+					<a
+						href="https://www.reddit.com/r/UCSC/comments/84o3wl/advice_for_upcoming_cs_majors/"
+						target="_blank"
+						rel="noopener noreferrer">
+						this advice
+					</a>{" "}
+					from a fellow CS major.
+				</p>
 				<p className="bold">What classes do I take? </p>
 				<div className="answer">
 					<p>Here’s all the classes you’ll need to take along with when they’re offered this year:</p>
 					<ul>
 						<li>
 							<img src={Arrow} alt="arrow" />
-							<a href="/" target="_blank" rel="noopener noreferrer">
+							<a
+								href="https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2019-07/CS_BS_19-20.pdf"
+								target="_blank"
+								rel="noopener noreferrer">
 								Curriculum Flow Charts
 							</a>
 						</li>
 						<li>
 							<img src={Arrow} alt="arrow" />
-							<a href="/" target="_blank" rel="noopener noreferrer">
+							<a
+								href="https://courses.soe.ucsc.edu/courses/cse"
+								target="_blank"
+								rel="noopener noreferrer">
 								Schedule of Classes
 							</a>
 						</li>
 						<li>
 							<img src={Arrow} alt="arrow" />
-							<a href="/" target="_blank" rel="noopener noreferrer">
+							<a href="https://registrar.ucsc.edu/" target="_blank" rel="noopener noreferrer">
 								Registrar
 							</a>
 						</li>
@@ -59,7 +74,10 @@ const Resources = () => {
 				<div className="answer">
 					<p>
 						Visit this{" "}
-						<a href="/" target="_blank" rel="noopener noreferrer">
+						<a
+							href="https://www.ratemyprofessors.com/campusRatings.jsp?sid=1078"
+							target="_blank"
+							rel="noopener noreferrer">
 							link
 						</a>
 						.
@@ -69,7 +87,7 @@ const Resources = () => {
 				<div className="answer">
 					<p>
 						Visit this{" "}
-						<a href="/" target="_blank" rel="noopener noreferrer">
+						<a href="https://www.soe.ucsc.edu/research" target="_blank" rel="noopener noreferrer">
 							link
 						</a>
 						.
@@ -86,8 +104,14 @@ const Resources = () => {
 				<p className="bold">Fill this out!</p>
 				<div className="answer">
 					<p>
-						Start by filling out this worksheet to figure out what you want your ideal career to look
-						like.
+						Start by filling out{" "}
+						<a
+							href="https://docs.google.com/document/d/1o76GaLDSHzquHhII9u-XAyKapSBvTh5f2NVri1KaPIk/edit"
+							target="_blank"
+							rel="noopener noreferrer">
+							this worksheet
+						</a>{" "}
+						to figure out what you want your ideal career to look like.
 					</p>
 				</div>
 
@@ -101,13 +125,19 @@ const Resources = () => {
 					<ul>
 						<li>
 							<img src={Arrow} alt="arrow" />
-							<a href="/" target="_blank" rel="noopener noreferrer">
+							<a
+								href="https://docs.google.com/document/u/1/d/e/2PACX-1vQpvbP8lzPvZrNvrX58UlacpQiLgh1fBQYfOS2pEJZvp-zOb9uKQJYKSsDQ6mJWoPf3H09OmdrLDcaK/pub?urp=gmail_link"
+								target="_blank"
+								rel="noopener noreferrer">
 								Resume
 							</a>
 						</li>
 						<li>
 							<img src={Arrow} alt="arrow" />
-							<a href="/" target="_blank" rel="noopener noreferrer">
+							<a
+								href="https://www.cmu.edu/career/documents/college-specific-resources/scs/New%20SCS%20Files%202018/CoverLetterGuide2018_SCS.pdf"
+								target="_blank"
+								rel="noopener noreferrer">
 								Cover Letter
 							</a>
 						</li>
@@ -118,8 +148,25 @@ const Resources = () => {
 					</ul>
 					<p>Now you’re ready to learn more about the interview process!</p>
 					<p>
-						Here’s a good overview, a more detailed overview, and advice from a UCSC ACM Alumni that works
-						at Microsoft now.
+						Here’s a{" "}
+						<a href="https://github.com/cassidoo/getting-a-gig" target="_blank" rel="noopener noreferrer">
+							good overview
+						</a>
+						, a more{" "}
+						<a
+							href="https://www.freecodecamp.org/news/how-to-land-a-top-notch-tech-job-as-a-student-5c97fec82f3d/"
+							target="_blank"
+							rel="noopener noreferrer">
+							detailed overview
+						</a>
+						, and{" "}
+						<a
+							href="https://medium.com/students-corner/strategies-for-landing-a-tech-internship-57f9370f533c"
+							target="_blank"
+							rel="noopener noreferrer">
+							advice from a UCSC ACM Alumni
+						</a>{" "}
+						that works at Microsoft now.
 					</p>
 				</div>
 
@@ -135,13 +182,32 @@ const Resources = () => {
 						<li>
 							<img src={Arrow} alt="arrow" />
 							<p>
-								Hackathons! You can find a list of all the MLH hackathons here. (most of them will be
-								online this year). We even have a UCSC one, CruzHacks!
+								Hackathons! You can find a list of all the MLH hackathons{" "}
+								<a
+									href="https://mlh.io/seasons/na-2020/events"
+									target="_blank"
+									rel="noopener noreferrer">
+									here
+								</a>
+								. (most of them will be online this year). We even have a UCSC one,{" "}
+								<a href="https://www.cruzhacks.com/" target="_blank" rel="noopener noreferrer">
+									CruzHacks
+								</a>
+								!
 							</p>
 						</li>
 						<li>
 							<img src={Arrow} alt="arrow" />
-							<p>Some other ideas for inspiration</p>
+							<p>
+								Some{" "}
+								<a
+									href="https://www.codementor.io/@npostolovski/40-side-project-ideas-for-software-engineers-g8xckyxef"
+									target="_blank"
+									rel="noopener noreferrer">
+									other ideas
+								</a>{" "}
+								for inspiration
+							</p>
 						</li>
 					</ul>
 				</div>
@@ -154,6 +220,44 @@ const Resources = () => {
 						We recommend going through this book, Cracking the Coding Interview, and practicing coding
 						questions here:
 					</p>
+					<ul>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<a href="https://leetcode.com/" target="_blank" rel="noopener noreferrer">
+								LeetCode
+							</a>
+						</li>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<a href="https://codesignal.com/" target="_blank" rel="noopener noreferrer">
+								Codesignal
+							</a>
+						</li>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<a href="https://www.hackerrank.com/" target="_blank" rel="noopener noreferrer">
+								HackerRank
+							</a>
+						</li>
+						<li>
+							<img src={Arrow} alt="arrow" />
+							<a href="https://www.geeksforgeeks.org/" target="_blank" rel="noopener noreferrer">
+								GeeksForGeeks
+							</a>
+						</li>
+					</ul>
+					<p>
+						You can stay up to date with all the tech news on{" "}
+						<a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">
+							HackerNews
+						</a>
+						!
+					</p>
+					<p>
+						Want even more information, come to our X meeting on Y, we’ll be sharing exclusive resources
+						from recruiters and engineers.
+					</p>
+					<p>Still unsure on where to apply? You can utilize these resources:</p>
 					<ul>
 						<li>
 							<img src={Arrow} alt="arrow" />
@@ -185,11 +289,18 @@ const Resources = () => {
 						</li>
 						<li>
 							<img src={Arrow} alt="arrow" />
-							<a href="/">Big List of Companies</a>
+							<a href="https://breakoutlist.com/all/" target="_blank" rel="noopener noreferrer">
+								Big List of Companies
+							</a>
 						</li>
 						<li>
 							<img src={Arrow} alt="arrow" />
-							<a href="/">Another Big List</a>
+							<a
+								href="https://ghc.anitab.org/previous-years/2018-sponsorships/corporate-sponsors/"
+								target="_blank"
+								rel="noopener noreferrer">
+								Another Big List
+							</a>
 						</li>
 					</ul>
 					<p>
@@ -199,19 +310,22 @@ const Resources = () => {
 					<ul>
 						<li>
 							<img src={Arrow} alt="arrow" />
-							<a href="/" target="_blank" rel="noopener noreferrer">
+							<a href="https://a16z.com/portfolio/" target="_blank" rel="noopener noreferrer">
 								Andreesson Horowitz
 							</a>
 						</li>
 						<li>
 							<img src={Arrow} alt="arrow" />
-							<a href="/" target="_blank" rel="noopener noreferrer">
+							<a
+								href="https://www.kleinerperkins.com/partnerships/"
+								target="_blank"
+								rel="noopener noreferrer">
 								Kleiner Perkins
 							</a>
 						</li>
 						<li>
 							<img src={Arrow} alt="arrow" />
-							<a href="/" target="_blank" rel="noopener noreferrer">
+							<a href="https://www.sequoiacap.com/companies/" target="_blank" rel="noopener noreferrer">
 								Sequoia
 							</a>
 						</li>
