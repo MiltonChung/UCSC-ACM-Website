@@ -1,0 +1,24 @@
+nav {
+	background: #ececf6;
+	padding: 1.5rem 2rem;
+
+	ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+		list-style-type: none;
+
+		li {
+			margin-left: 3rem;
+			svg {
+				width: 35px;
+				height: auto;
+			}
+
+			a.selected {
+				color: $acm-pink;
+			}
+		}
+	}
+}
