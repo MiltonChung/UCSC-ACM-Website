@@ -27,7 +27,7 @@ const AboutUs = () => {
 					our <span className="font-blue">mission</span> statement
 				</h2>
 
-				<article className="first-bubble">
+				<article className="main-bubble">
 					<img src={BlackUSB} alt="usb" />
 					<div className="bubble">
 						<p>
@@ -41,8 +41,7 @@ const AboutUs = () => {
 					i'm interested! how do i get <span className="font-blue">involved</span>?
 				</h3>
 
-				<article className="first-bubble">
-					<img src={PinkUSB} alt="usb" />
+				<article className="main-bubble">
 					<div className="bubble">
 						<p>
 							That’s great! To become a member, you can fill out{" "}
@@ -57,6 +56,7 @@ const AboutUs = () => {
 							don’t hesitate to contact us!
 						</p>
 					</div>
+					<img src={PinkUSB} alt="usb" />
 				</article>
 
 				<h3>
