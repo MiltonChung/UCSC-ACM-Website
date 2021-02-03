@@ -1,26 +1,18 @@
 import React from "react";
+// Components
+import BoardMemberLeft from "../components/AboutUs/BoardMemberLeft";
+import BoardMemberRight from "../components/AboutUs/BoardMemberRight";
+import BackgroundSVG from "../components/BackgroundSVG";
 // Svg
-import CircleO from "../images/circle-o.svg";
-import Circle from "../images/circle.svg";
-import DoubleLines from "../images/double-lines.svg";
-import DoubleLinesDot from "../images/double-lines-dot.svg";
-import TripleLines from "../images/triple-lines.svg";
 import BlackUSB from "../images/black-usb.svg";
 import PinkUSB from "../images/pink-usb.svg";
+// Image
+import Avatar from "../images/avatar.jpg";
 
 const AboutUs = () => {
 	return (
 		<div className="aboutus">
-			<img className="svg-1" src={CircleO} alt="circleo" />
-			<img className="svg-2" src={TripleLines} alt="tripleLines" />
-			<img className="svg-3" src={DoubleLinesDot} alt="lines" />
-			<img className="svg-4" src={DoubleLinesDot} alt="lines" />
-			<img className="svg-5" src={CircleO} alt="circleo" />
-			<img className="svg-6" src={TripleLines} alt="tripleLines" />
-			<img className="svg-7" src={CircleO} alt="circleo" />
-			<img className="svg-8" src={CircleO} alt="circleo" />
-			<img className="svg-9" src={DoubleLines} alt="lines" />
-			<img className="svg-10" src={Circle} alt="circle" />
+			<BackgroundSVG />
 
 			<div className="aboutus-body">
 				<h2>
@@ -75,6 +67,9 @@ const AboutUs = () => {
 				<h3>
 					meet the <span className="font-blue">board</span>
 				</h3>
+
+				<BoardMemberLeft position="president" name="disha mevada" profile={Avatar} />
+				<BoardMemberRight />
 			</div>
 		</div>
 	);

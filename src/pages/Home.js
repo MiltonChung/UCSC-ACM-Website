@@ -1,6 +1,6 @@
 import React from "react";
 // Components
-import Landing from "../components/Landing";
+import Landing from "../components/Home/Landing";
 // Svg
 import CircleO from "../images/circle-o.svg";
 import Circle from "../images/circle.svg";

@@ -1,6 +1,6 @@
 import React from "react";
 // Images
-import Logo from "../images/light-logo.svg";
+import Logo from "../../images/light-logo.svg";
 
 const Landing = () => {
 	return (
