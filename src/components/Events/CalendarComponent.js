@@ -1,5 +1,5 @@
 import React from "react";
-import { Calendar, momentLocalizer, Views } from "react-big-calendar";
+import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 
 const localizer = momentLocalizer(moment);
@@ -21,7 +21,7 @@ const myEventsList = [
 		end: now,
 		allDay: true,
 		location: "College 10",
-		desc: "Big conference for important people",
+		desc: "This is a place for students to play around with React!",
 	},
 	{
 		id: 2,
@@ -35,8 +35,8 @@ const myEventsList = [
 
 function EventAgenda({ event }) {
 	return (
-		<span>
-			<em style={{ color: "magenta" }}>{event.title}</em>
+		<span className="calendar-agenda">
+			<h4>{event.title}</h4>
 			<p>{event.desc}</p>
 		</span>
 	);
@@ -44,21 +44,30 @@ function EventAgenda({ event }) {
 
 function Event({ event }) {
 	return (
-		<span>
-			<strong>{event.title}:</strong>
-			<p className="italicize">
-				{event.start.getHours()} - {event.end.getHours()}
-			</p>
+		<span className="calendar-month">
+			<h4>{event.title}:</h4>
+			<p className="italicize">{eventHourFormatter(event.start, event.end)}</p>
 			<p className="italicize">{event.location}</p>
 			<p>{event.desc}</p>
 		</span>
 	);
 }
 
+const eventHourFormatter = (start, end) => {
+	const options = {
+		hour: "numeric",
+		minute: "numeric",
+		hour12: true,
+	};
+	const startString = start.toLocaleString("en-US", options);
+	const endString = end.toLocaleString("en-US", options);
+	return `${startString} ~ ${endString}`;
+};
+
 const ColoredDateCellWrapper = ({ children }) =>
 	React.cloneElement(React.Children.only(children), {
 		style: {
-			backgroundColor: "white",
+			backgroundColor: "rgba(255, 255, 255, 0.5)",
 		},
 	});
 
@@ -81,6 +90,7 @@ const CalendarComponent = () => {
 						event: EventAgenda,
 					},
 					timeSlotWrapper: ColoredDateCellWrapper,
+					dateCellWrapper: ColoredDateCellWrapper,
 				}}
 			/>
 		</div>
