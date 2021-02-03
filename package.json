@@ -44,6 +44,7 @@
 	},
 	"devDependencies": {
 		"@iconify/icons-ant-design": "^1.1.0",
+		"@iconify/icons-brandico": "^1.1.0",
 		"@iconify/icons-fluent": "^1.1.3",
 		"@iconify/icons-grommet-icons": "^1.1.0",
 		"@iconify/icons-ic": "^1.1.2",
