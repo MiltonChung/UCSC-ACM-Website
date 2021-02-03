@@ -77,6 +77,9 @@ button {
 .font-blue {
 	color: $acm-blue;
 }
+.italicize {
+	font-style: italic;
+}
 
 // ====== MIXINS =========
 @mixin window-card-circles($color) {
@@ -95,6 +98,31 @@ button {
 	bottom: $bottom;
 	left: $left;
 	z-index: 1;
+}
+
+.rbc-row-segment .rbc-event-content {
+	text-overflow: unset;
+	white-space: unset;
+	overflow: unset;
+	strong,
+	span {
+		font-family: $acm-secondary-font;
+	}
+}
+
+.rbc-event {
+	border-radius: 10px;
+	padding: 0.3rem;
+}
+
+.rbc-month-row {
+	overflow: unset;
+}
+
+.rbc-day-slot .rbc-events-container {
+	div {
+		height: unset !important;
+	}
 }
 
 @import "aboutus";

@@ -1,1 +1,13 @@
- 
+.events {
+	width: 85%;
+	margin: 0 auto;
+	position: relative;
+
+	.events-calendar {
+		position: relative;
+		z-index: 5;
+		h3 {
+			margin: 3rem 0;
+		}
+	}
+}
