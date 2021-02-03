@@ -71,4 +71,55 @@
 			}
 		}
 	}
+
+	.board-member-left {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-end;
+		margin-top: 5rem;
+		img {
+			border: black solid 2px;
+			vertical-align: middle;
+			width: 130px;
+			height: 130px;
+			border-radius: 50%;
+			margin-right: 2rem;
+			margin-bottom: -3.5rem;
+		}
+
+		.chat-bubble {
+			&-names {
+				font-family: Oswald;
+				font-size: 24px;
+				font-weight: 400;
+				margin-left: 2rem;
+			}
+			&-text {
+				position: relative;
+				line-height: 35px;
+				font-size: 24px;
+				width: fit-content;
+				max-width: 800px;
+				background: $acm-gray;
+				border-radius: 41px;
+				padding: 1.4rem 2rem;
+				text-align: left;
+				box-shadow: 10px 5px 10px rgba(77, 77, 77, 0.295);
+			}
+
+			&-bottom-left:before {
+				content: "";
+				width: 0px;
+				height: 0px;
+				position: absolute;
+				border-left: 15px solid transparent;
+				border-right: 20px solid $acm-gray;
+				border-top: 20px solid transparent;
+				border-bottom: 20px solid $acm-gray;
+				left: -10px;
+				bottom: 6px;
+			}
+		}
+	}
 }
