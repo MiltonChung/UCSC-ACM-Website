@@ -46,6 +46,7 @@
 		"@iconify/icons-ant-design": "^1.1.0",
 		"@iconify/icons-fluent": "^1.1.3",
 		"@iconify/icons-grommet-icons": "^1.1.0",
+		"@iconify/icons-ic": "^1.1.2",
 		"@iconify/icons-ion": "^1.1.2",
 		"@iconify/react": "^1.1.3"
 	}

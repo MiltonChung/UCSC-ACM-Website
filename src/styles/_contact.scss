@@ -1,0 +1,61 @@
+.contact {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.leftSide {
+	position: relative;
+	z-index: 5;
+	margin-right: 2rem;
+
+	h2 {
+		margin-top: 5rem;
+	}
+	.icon-holder {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: $acm-gray;
+		width: fit-content;
+		margin-top: 5rem;
+		padding: 2rem 3rem;
+		border-radius: 20px;
+		box-shadow: 2px 4px 7px 0px rgba(0, 0, 0, 0.15);
+
+		.email {
+			width: 80px;
+			height: auto;
+			color: $acm-yellow;
+		}
+		.facebook {
+			width: 60px;
+			height: auto;
+			margin: 0 8rem;
+			color: $acm-blue;
+		}
+		.slack {
+			width: 77px;
+			height: auto;
+			color: $acm-pink;
+		}
+		svg {
+			cursor: pointer;
+			transition: all 0.34;
+		}
+
+		.email:hover,
+		.facebook:hover,
+		.slack:hover {
+			color: $acm-black;
+		}
+	}
+}
+
+.rightSide {
+	position: relative;
+	z-index: 5;
+}

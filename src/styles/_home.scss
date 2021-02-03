@@ -125,7 +125,7 @@ button.join:hover {
 .window-card {
 	width: 60vw;
 	min-height: 500px;
-	max-height: 80vh;
+	height: fit-content;
 	background: $acm-gray;
 	border-radius: 20px;
 	box-shadow: 2px 4px 7px 0px rgba(0, 0, 0, 0.15);
@@ -188,8 +188,8 @@ button.join:hover {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding-top: 1rem;
-		padding-bottom: 3rem;
+		margin-top: 1rem;
+		margin-bottom: 3rem;
 
 		button {
 			background: $acm-black;

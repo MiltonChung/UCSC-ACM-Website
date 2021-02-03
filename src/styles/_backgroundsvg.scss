@@ -1,0 +1,30 @@
+.svg-1 {
+	@include svg-placer(5%, unset, 5%, unset);
+}
+.svg-2 {
+	@include svg-placer(1%, unset, 15%, unset);
+}
+.svg-3 {
+	@include svg-placer(15%, unset, -2%, unset);
+}
+.svg-4 {
+	@include svg-placer(20%, unset, unset, 10%);
+}
+.svg-5 {
+	@include svg-placer(38%, unset, 5%, unset);
+}
+.svg-6 {
+	@include svg-placer(55%, unset, 16%, unset);
+}
+.svg-7 {
+	@include svg-placer(unset, 25%, 5%, unset);
+}
+.svg-8 {
+	@include svg-placer(unset, 35%, unset, 15%);
+}
+.svg-9 {
+	@include svg-placer(unset, 10%, 16%, unset);
+}
+.svg-10 {
+	@include svg-placer(unset, 1%, unset, 12%);
+}

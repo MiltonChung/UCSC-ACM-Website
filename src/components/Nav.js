@@ -14,27 +14,27 @@ const Nav = () => {
 		<nav>
 			<ul>
 				<li>
-					<NavLink to="/" activeClassName="selected" exact>
+					<NavLink to="/" title="Home" activeClassName="selected" exact>
 						<Icon icon={Home} />
 					</NavLink>
 				</li>
 				<li>
-					<NavLink to="/aboutus" activeClassName="selected">
+					<NavLink to="/aboutus" title="About Us" activeClassName="selected">
 						<Icon icon={AboutUs} />
 					</NavLink>
 				</li>
 				<li>
-					<NavLink to="/events" activeClassName="selected">
+					<NavLink to="/events" title="Events" activeClassName="selected">
 						<Icon icon={Events} />
 					</NavLink>
 				</li>
 				<li>
-					<NavLink to="/resources" activeClassName="selected">
+					<NavLink to="/resources" title="Resources" activeClassName="selected">
 						<Icon icon={Resources} />
 					</NavLink>
 				</li>
 				<li>
-					<NavLink to="/contact" activeClassName="selected">
+					<NavLink to="/contact" title="Contact" activeClassName="selected">
 						<Icon icon={Contact} />
 					</NavLink>
 				</li>
