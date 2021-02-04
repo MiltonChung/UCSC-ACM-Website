@@ -7,6 +7,7 @@ import Loading from "../components/Loading";
 // Svg
 import BlackUSB from "../images/black-usb.svg";
 import PinkUSB from "../images/pink-usb.svg";
+import defaultAvatar from "../images/avatar.jpg";
 // Sanity
 import sanityClient from "../sanity";
 
@@ -29,7 +30,19 @@ const AboutUs = () => {
 					},
 				} | order(orderID asc)`
 			)
-			.then(data => setBoardMembers(data))
+			.then(data => {
+				data.forEach(person => {
+					if (!person.profilePic) {
+						person.profilePic = {
+							asset: {
+								_id: Math.random() * (99999 - 1) + 1,
+								url: defaultAvatar,
+							},
+						};
+					}
+				});
+				return setBoardMembers(data);
+			})
 			.catch(error => console.log(error));
 	}, []);
 
