@@ -8,16 +8,39 @@
 	text-overflow: unset;
 	white-space: unset;
 	overflow: unset;
+	overflow-wrap: anywhere;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	cursor: text;
 	strong,
 	span {
 		font-family: $acm-secondary-font;
 	}
+}
+.rbc-event.rbc-selected {
+	background: $acm-blue !important;
+	outline: none;
+	cursor: text;
 }
 
 .rbc-event {
 	border-radius: 10px;
 	padding: 0.3rem;
 	background: $acm-blue;
+
+	.rbc-event-label {
+		display: none;
+	}
+	.rbc-event-content {
+		cursor: text;
+
+		.calendar-month {
+			padding: 0.2rem;
+			overflow-wrap: anywhere;
+			-webkit-user-select: text;
+			-moz-user-select: text;
+		}
+	}
 }
 
 .rbc-month-row {

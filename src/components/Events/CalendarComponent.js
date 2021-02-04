@@ -10,6 +10,7 @@ function EventAgenda({ event }) {
 	return (
 		<span className="calendar-agenda">
 			<h4>{event.title}</h4>
+			<p className="italicize">{event.location}</p>
 			<p>{event.description}</p>
 		</span>
 	);
@@ -80,8 +81,9 @@ const CalendarComponent = () => {
 				endAccessor="end"
 				views={["month", "week", "agenda"]}
 				defaultView="month"
-				step={120}
 				showMultiDayTimes
+				step={10}
+				timeslots={12}
 				style={{ height: 800 }}
 				components={{
 					event: Event,
