@@ -3,14 +3,17 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	align-items: center;
 	width: 80%;
+	height: 120%;
 	margin: 0 auto;
+	padding-bottom: 10rem;
 }
 
 .leftSide {
 	position: relative;
 	z-index: 5;
-	margin-right: 2rem;
+	margin-right: 5rem;
 
 	h2 {
 		margin-top: 5rem;
@@ -58,4 +61,5 @@
 .rightSide {
 	position: relative;
 	z-index: 5;
+	margin-top: 8rem;
 }

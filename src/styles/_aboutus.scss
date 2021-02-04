@@ -1,5 +1,6 @@
 .aboutus {
 	position: relative;
+	padding-bottom: 15rem;
 	.svg-1 {
 		@include svg-placer(5%, unset, 5%, unset);
 	}
