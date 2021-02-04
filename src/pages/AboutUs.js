@@ -3,11 +3,10 @@ import React, { useState, useEffect } from "react";
 import BoardMemberLeft from "../components/AboutUs/BoardMemberLeft";
 import BoardMemberRight from "../components/AboutUs/BoardMemberRight";
 import BackgroundSVG from "../components/BackgroundSVG";
+import Loading from "../components/Loading";
 // Svg
 import BlackUSB from "../images/black-usb.svg";
 import PinkUSB from "../images/pink-usb.svg";
-// Image
-import Avatar from "../images/avatar.jpg";
 // Sanity
 import sanityClient from "../sanity";
 
@@ -33,8 +32,6 @@ const AboutUs = () => {
 			.then(data => setBoardMembers(data))
 			.catch(error => console.log(error));
 	}, []);
-
-	console.log(boardMembers);
 
 	return (
 		<div className="aboutus">
@@ -94,45 +91,35 @@ const AboutUs = () => {
 					meet the <span className="font-blue">board</span>
 				</h3>
 
-				{boardMembers.map((person, index) => {
-					if (index % 2 === 1) {
-						return (
-							<BoardMemberRight
-								id={person._id}
-								key={person._id}
-								position={person.position}
-								name={person.name}
-								profile={person.profilePic.asset.url}
-								message={person.blurb}
-							/>
-						);
-					} else {
-						return (
-							<BoardMemberLeft
-								key={person._id}
-								id={person._id}
-								position={person.position}
-								name={person.name}
-								profile={person.profilePic.asset.url}
-								message={person.blurb}
-							/>
-						);
-					}
-				})}
-
-				{/* 
-				<BoardMemberLeft
-					position="president"
-					name="disha mevada"
-					profile={Avatar}
-					message="Hi everyone! I’m Disha and I’m currently a senior majoring in CS. Joining ACM was one of the best decisions I made in college. I was really confused about my career when I was a freshman, but joining ACM gave me a clear sense of direction and community. Not only did I get a chance to build my technical skills through worksthops and events like HackACM, I also got the chance to meet some amazing people who shared the same passion as I did. I hope to see you at our ACM events! "
-				/>
-				<BoardMemberRight
-					position="vice president"
-					name="shefali qamar"
-					profile={Avatar}
-					message="Hi! I’m Shefali, a junior studying CS at UCSC and your ACM Vice President! Through ACM the past few years, I have learned about leadership and what it takes to be a successful software engineer, developed passion projects at HackACM, and honed my skills through workshops such as resume writing, coding interview skills, machine learning, Python, and more. The best part has been getting to go through it all alongside a great community of welcoming & energetic people!  I hope that you join us in making ACM the place where we grow and learn computer science together. "
-				/> */}
+				{boardMembers.length === 0 ? (
+					<Loading />
+				) : (
+					boardMembers.map((person, index) => {
+						if (index % 2 === 1) {
+							return (
+								<BoardMemberRight
+									id={person._id}
+									key={person._id}
+									position={person.position}
+									name={person.name}
+									profile={person.profilePic.asset.url}
+									message={person.blurb}
+								/>
+							);
+						} else {
+							return (
+								<BoardMemberLeft
+									key={person._id}
+									id={person._id}
+									position={person.position}
+									name={person.name}
+									profile={person.profilePic.asset.url}
+									message={person.blurb}
+								/>
+							);
+						}
+					})
+				)}
 			</div>
 		</div>
 	);

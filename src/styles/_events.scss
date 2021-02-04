@@ -3,11 +3,29 @@
 	margin: 0 auto;
 	position: relative;
 
-	.events-calendar {
+	&-calendar {
 		position: relative;
 		z-index: 5;
 		h3 {
 			margin: 4rem 0;
+		}
+	}
+
+	&-upcoming {
+		margin: 8rem 0 4rem 0;
+		&-windows {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+			column-gap: 2.4rem;
+
+			.window-card {
+				width: 100%;
+				&-texts,
+				&-texts-title {
+					width: 100%;
+					text-align: center;
+				}
+			}
 		}
 	}
 }

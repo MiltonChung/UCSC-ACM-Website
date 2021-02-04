@@ -5,35 +5,6 @@ import moment from "moment";
 import sanityClient from "../../sanity";
 
 const localizer = momentLocalizer(moment);
-const now = new Date();
-const myEventsList = [
-	{
-		id: 0,
-		title: "html + css party",
-		allDay: false,
-		start: new Date(2021, 1, 17, 17),
-		end: new Date(2021, 1, 17, 18),
-		location: "Jack Baskin Building 2",
-		desc: "Come learn how to code your own website! Snacks and drinks provided.",
-	},
-	{
-		id: 1,
-		title: "react native playbooks",
-		start: now,
-		end: now,
-		allDay: true,
-		location: "College 10",
-		desc: "This is a place for students to play around with React!",
-	},
-	{
-		id: 2,
-		title: "DTS STARTS",
-		start: new Date(2021, 2, 13),
-		end: new Date(2021, 2, 16),
-		location: "Your home!",
-		desc: "Big conference for important people",
-	},
-];
 
 function EventAgenda({ event }) {
 	return (
@@ -91,7 +62,7 @@ const CalendarComponent = () => {
 			}`
 			)
 			.then(data => {
-				data.map(ev => {
+				data.forEach(ev => {
 					ev.start = new Date(ev.start);
 					ev.end = new Date(ev.end);
 				});

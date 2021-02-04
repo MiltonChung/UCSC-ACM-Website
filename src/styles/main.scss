@@ -80,6 +80,17 @@ button {
 .italicize {
 	font-style: italic;
 }
+.loader {
+	width: 350px;
+	height: 350px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	svg {
+		width: 350px;
+		height: 350px;
+	}
+}
 
 // ====== MIXINS =========
 @mixin window-card-circles($color) {
