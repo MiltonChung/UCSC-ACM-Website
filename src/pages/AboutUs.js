@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 // Components
 import BoardMemberLeft from "../components/AboutUs/BoardMemberLeft";
 import BoardMemberRight from "../components/AboutUs/BoardMemberRight";
@@ -8,8 +8,34 @@ import BlackUSB from "../images/black-usb.svg";
 import PinkUSB from "../images/pink-usb.svg";
 // Image
 import Avatar from "../images/avatar.jpg";
+// Sanity
+import sanityClient from "../sanity";
 
 const AboutUs = () => {
+	const [boardMembers, setBoardMembers] = useState([]);
+	useEffect(() => {
+		sanityClient
+			.fetch(
+				`*[_type == "boardMember"]  {
+					orderID,
+					_id,
+					name,
+					position,
+					blurb,
+					profilePic{
+						asset->{
+							_id,
+							url
+						},
+					},
+				} | order(orderID asc)`
+			)
+			.then(data => setBoardMembers(data))
+			.catch(error => console.log(error));
+	}, []);
+
+	console.log(boardMembers);
+
 	return (
 		<div className="aboutus">
 			<BackgroundSVG />
@@ -68,6 +94,33 @@ const AboutUs = () => {
 					meet the <span className="font-blue">board</span>
 				</h3>
 
+				{boardMembers.map((person, index) => {
+					if (index % 2 === 1) {
+						return (
+							<BoardMemberRight
+								id={person._id}
+								key={person._id}
+								position={person.position}
+								name={person.name}
+								profile={person.profilePic.asset.url}
+								message={person.blurb}
+							/>
+						);
+					} else {
+						return (
+							<BoardMemberLeft
+								key={person._id}
+								id={person._id}
+								position={person.position}
+								name={person.name}
+								profile={person.profilePic.asset.url}
+								message={person.blurb}
+							/>
+						);
+					}
+				})}
+
+				{/* 
 				<BoardMemberLeft
 					position="president"
 					name="disha mevada"
@@ -79,7 +132,7 @@ const AboutUs = () => {
 					name="shefali qamar"
 					profile={Avatar}
 					message="Hi! I’m Shefali, a junior studying CS at UCSC and your ACM Vice President! Through ACM the past few years, I have learned about leadership and what it takes to be a successful software engineer, developed passion projects at HackACM, and honed my skills through workshops such as resume writing, coding interview skills, machine learning, Python, and more. The best part has been getting to go through it all alongside a great community of welcoming & energetic people!  I hope that you join us in making ACM the place where we grow and learn computer science together. "
-				/>
+				/> */}
 			</div>
 		</div>
 	);

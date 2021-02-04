@@ -100,56 +100,6 @@ button {
 	z-index: 1;
 }
 
-.rbc-row-segment .rbc-event-content {
-	text-overflow: unset;
-	white-space: unset;
-	overflow: unset;
-	strong,
-	span {
-		font-family: $acm-secondary-font;
-	}
-}
-
-.rbc-event {
-	border-radius: 10px;
-	padding: 0.3rem;
-}
-
-.rbc-month-row {
-	overflow: unset;
-}
-
-.rbc-day-slot .rbc-events-container {
-	div {
-		height: unset !important;
-	}
-}
-
-.calendar-agenda {
-	h4 {
-		color: $acm-blue;
-	}
-}
-
-.rbc-calendar {
-	min-width: 1000px;
-}
-
-.calendar-month {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	p {
-		margin-top: 0.34rem;
-		text-align: center;
-	}
-	h4 {
-		text-align: center;
-		font-family: $acm-secondary-font;
-		font-size: 18px;
-	}
-}
-
 @import "aboutus";
 @import "contact";
 @import "events";
@@ -158,3 +108,4 @@ button {
 @import "footer";
 @import "nav";
 @import "backgroundsvg";
+@import "calendar";

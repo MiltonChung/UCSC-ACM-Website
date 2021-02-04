@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
+// import BlockContent from "@sanity/block-content-to-react";
+import sanityClient from "../../sanity";
 
 const localizer = momentLocalizer(moment);
 const now = new Date();
@@ -37,7 +39,7 @@ function EventAgenda({ event }) {
 	return (
 		<span className="calendar-agenda">
 			<h4>{event.title}</h4>
-			<p>{event.desc}</p>
+			<p>{event.description}</p>
 		</span>
 	);
 }
@@ -48,7 +50,7 @@ function Event({ event }) {
 			<h4>{event.title}:</h4>
 			<p className="italicize">{eventHourFormatter(event.start, event.end)}</p>
 			<p className="italicize">{event.location}</p>
-			<p>{event.desc}</p>
+			<p>{event.description}</p>
 		</span>
 	);
 }
@@ -59,6 +61,8 @@ const eventHourFormatter = (start, end) => {
 		minute: "numeric",
 		hour12: true,
 	};
+	start = new Date(start);
+	end = new Date(end);
 	const startString = start.toLocaleString("en-US", options);
 	const endString = end.toLocaleString("en-US", options);
 	return `${startString} ~ ${endString}`;
@@ -72,11 +76,35 @@ const ColoredDateCellWrapper = ({ children }) =>
 	});
 
 const CalendarComponent = () => {
+	const [eventsList, setEventsList] = useState([]);
+
+	useEffect(() => {
+		sanityClient
+			.fetch(
+				`*[_type == "events"] {
+				title,
+				allday,
+				start,
+				end,
+				location,
+				description,
+			}`
+			)
+			.then(data => {
+				data.map(ev => {
+					ev.start = new Date(ev.start);
+					ev.end = new Date(ev.end);
+				});
+				return setEventsList(data);
+			})
+			.catch(error => console.log(error));
+	}, []);
+
 	return (
 		<div className="calendar">
 			<Calendar
 				localizer={localizer}
-				events={myEventsList}
+				events={eventsList}
 				startAccessor="start"
 				endAccessor="end"
 				views={["month", "week", "agenda"]}
