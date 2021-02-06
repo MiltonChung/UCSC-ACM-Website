@@ -6,4 +6,8 @@
 	position: absolute;
 	width: 100%;
 	bottom: 0;
+
+	@media only screen and (max-width: 500px) {
+		margin-bottom: 5rem;
+	}
 }

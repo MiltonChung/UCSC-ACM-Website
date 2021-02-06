@@ -1,6 +1,11 @@
 nav {
 	background: #ececf6;
 	padding: 1.2rem 2rem;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+	overflow: hidden;
+	width: 100%;
 
 	ul {
 		display: flex;
@@ -30,16 +35,30 @@ nav {
 	}
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 500px) {
 	nav {
 		padding: 1rem 1.5rem;
-
+		box-shadow: 0 -5px 15px rgba(41, 41, 41, 0.363);
+		bottom: 0;
+		top: unset;
 		ul {
 			justify-content: space-between;
 			li {
 				margin-left: 0rem;
 				svg {
-					width: 25px;
+					width: 30px;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	nav {
+		ul {
+			li {
+				svg {
+					width: 22px;
 				}
 			}
 		}
