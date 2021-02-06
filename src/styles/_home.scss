@@ -148,128 +148,127 @@ a.join:hover {
 	align-items: center;
 	justify-content: center;
 	width: 100%;
+}
+.window-card {
+	width: 60vw;
+	min-height: 500px;
+	height: fit-content;
+	background: $acm-gray;
+	border-radius: 20px;
+	box-shadow: 2px 4px 7px 0px rgba(0, 0, 0, 0.15);
+	overflow: hidden;
+	margin: 3rem 0;
+	z-index: 2;
 
-	.window-card {
-		width: 60vw;
-		min-height: 500px;
-		height: fit-content;
-		background: $acm-gray;
-		border-radius: 20px;
-		box-shadow: 2px 4px 7px 0px rgba(0, 0, 0, 0.15);
-		overflow: hidden;
-		margin: 3rem 0;
-		z-index: 2;
+	&-top-menu {
+		height: 65px;
+		background: $acm-black;
+		display: flex;
+		align-items: center;
 
-		&-top-menu {
-			height: 65px;
-			background: $acm-black;
-			display: flex;
-			align-items: center;
+		padding-left: 1.2rem;
 
-			padding-left: 1.2rem;
+		.red-circle {
+			@include window-card-circles($acm-pink);
+		}
+		.yellow-circle {
+			@include window-card-circles($acm-yellow);
+		}
+		.green-circle {
+			@include window-card-circles($acm-green);
+		}
+		.red-circle:hover,
+		.yellow-circle:hover,
+		.green-circle:hover {
+			opacity: 0.8;
+		}
+	}
 
-			.red-circle {
-				@include window-card-circles($acm-pink);
-			}
-			.yellow-circle {
-				@include window-card-circles($acm-yellow);
-			}
-			.green-circle {
-				@include window-card-circles($acm-green);
-			}
-			.red-circle:hover,
-			.yellow-circle:hover,
-			.green-circle:hover {
-				opacity: 0.8;
+	&-texts {
+		padding: 1.5rem;
+
+		&-title {
+			margin-bottom: 1.5rem;
+			position: relative;
+			width: fit-content;
+			line-height: 50px;
+
+			img {
+				position: absolute;
+				right: -20px;
+				bottom: -18px;
 			}
 		}
 
+		&-body {
+			font-size: 24px;
+			font-weight: 400;
+			line-height: 35px;
+		}
+	}
+
+	&-button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 1rem;
+		margin-bottom: 3rem;
+
+		button {
+			background: $acm-black;
+			font-size: 33px;
+			font-weight: 400;
+			color: $acm-white;
+			padding: 0.5rem 3rem;
+			border: 3px $acm-black solid;
+			transition: all 0.5s;
+			box-shadow: 0px 5px 20px 8px rgba(7, 6, 0, 0.25);
+		}
+		button:hover {
+			color: $acm-black;
+			background: $acm-gray;
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+		width: 88%;
+	}
+	@media only screen and (max-width: 500px) {
+		width: 93%;
+		min-height: fit-content;
+		height: fit-content;
+
+		&-top-menu {
+			height: 40px;
+			padding-left: 1.4rem;
+		}
+
 		&-texts {
-			padding: 1.5rem;
+			padding: 1.5rem 1.1rem;
 
 			&-title {
-				margin-bottom: 1.5rem;
-				position: relative;
-				width: fit-content;
-				line-height: 50px;
-
+				font-size: 45px;
+				margin-bottom: 1rem;
 				img {
-					position: absolute;
-					right: -20px;
-					bottom: -18px;
+					right: 0px;
 				}
 			}
 
 			&-body {
-				font-size: 24px;
-				font-weight: 400;
-				line-height: 35px;
+				font-size: 18px;
+				line-height: 28px;
 			}
 		}
 
 		&-button {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin-top: 1rem;
-			margin-bottom: 3rem;
+			margin-top: 0rem;
+			margin-bottom: 1.5rem;
 
 			button {
-				background: $acm-black;
-				font-size: 33px;
-				font-weight: 400;
-				color: $acm-white;
-				padding: 0.5rem 3rem;
-				border: 3px $acm-black solid;
+				font-size: 24px;
+				padding: 0.5rem 2rem;
+				border: 2px $acm-black solid;
 				transition: all 0.5s;
-				box-shadow: 0px 5px 20px 8px rgba(7, 6, 0, 0.25);
-			}
-			button:hover {
-				color: $acm-black;
-				background: $acm-gray;
-			}
-		}
-
-		@media only screen and (max-width: 768px) {
-			width: 88%;
-		}
-		@media only screen and (max-width: 450px) {
-			width: 93%;
-			min-height: fit-content;
-			height: fit-content;
-
-			&-top-menu {
-				height: 40px;
-				padding-left: 1.4rem;
-			}
-
-			&-texts {
-				padding: 1.5rem 1.1rem;
-
-				&-title {
-					font-size: 45px;
-					margin-bottom: 1rem;
-					img {
-						right: 0px;
-					}
-				}
-
-				&-body {
-					font-size: 18px;
-					line-height: 28px;
-				}
-			}
-
-			&-button {
-				margin-top: 0rem;
-				margin-bottom: 1.5rem;
-
-				button {
-					font-size: 24px;
-					padding: 0.5rem 2rem;
-					border: 2px $acm-black solid;
-					transition: all 0.5s;
-				}
 			}
 		}
 	}

@@ -1,36 +1,6 @@
 .aboutus {
 	position: relative;
 	padding-bottom: 15rem;
-	.svg-1 {
-		@include svg-placer(5%, unset, 5%, unset);
-	}
-	.svg-2 {
-		@include svg-placer(1%, unset, 15%, unset);
-	}
-	.svg-3 {
-		@include svg-placer(15%, unset, -2%, unset);
-	}
-	.svg-4 {
-		@include svg-placer(20%, unset, unset, 10%);
-	}
-	.svg-5 {
-		@include svg-placer(38%, unset, 5%, unset);
-	}
-	.svg-6 {
-		@include svg-placer(55%, unset, 16%, unset);
-	}
-	.svg-7 {
-		@include svg-placer(unset, 25%, 5%, unset);
-	}
-	.svg-8 {
-		@include svg-placer(unset, 35%, unset, 15%);
-	}
-	.svg-9 {
-		@include svg-placer(unset, 10%, 16%, unset);
-	}
-	.svg-10 {
-		@include svg-placer(unset, 1%, unset, 12%);
-	}
 }
 
 .aboutus-body {
@@ -42,20 +12,39 @@
 	justify-content: center;
 
 	h2 {
-		margin-top: 1rem;
+		margin: 2rem 1rem 0 1rem;
+		line-height: 60px;
+		text-align: center;
 	}
 
 	h3 {
-		margin-top: 1rem;
-		margin-top: 10rem;
+		margin: 10rem 1.4rem 0 1.4rem;
+		line-height: 50px;
+		text-align: center;
+	}
+
+	@media only screen and (max-width: 768px) {
+		h2 {
+			font-size: 52px;
+		}
+
+		h3 {
+			margin: 6rem 1.4rem 0 1.4rem;
+			font-size: 35px;
+		}
 	}
 
 	.main-bubble {
 		display: flex;
 		flex-direction: row;
-		margin-top: 2rem;
 		align-items: flex-end;
+		margin: 0 1.4rem;
+		margin-top: 2rem;
 
+		img {
+			width: 200px;
+			height: auto;
+		}
 		.bubble {
 			background: $acm-gray;
 			margin: 0 2rem;
@@ -64,11 +53,44 @@
 			padding: 1.5rem;
 			border-radius: 20px;
 			box-shadow: 2px 4px 7px 0px rgba(0, 0, 0, 0.15);
-
 			p {
 				font-size: 24px;
 				font-weight: 400;
 				line-height: 35px;
+			}
+		}
+
+		@media only screen and (max-width: 768px) {
+			img {
+				width: 120px;
+			}
+			.bubble {
+				margin: 0 1.2rem;
+				padding: 1rem;
+
+				p {
+					font-size: 18px;
+					line-height: 25px;
+				}
+			}
+		}
+
+		@media only screen and (max-width: 500px) {
+			flex-direction: column;
+			align-items: flex-start;
+			img {
+				width: 85px;
+				order: 1;
+			}
+			.bubble {
+				order: 2;
+				width: 100%;
+				margin: 1rem 0 1rem 0;
+
+				p {
+					font-size: 18px;
+					line-height: 25px;
+				}
 			}
 		}
 	}
