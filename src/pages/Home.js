@@ -1,30 +1,23 @@
 import React from "react";
 // Components
 import Landing from "../components/Home/Landing";
+import BackgroundSVG from "../components/BackgroundSVG";
 // Svg
-import CircleO from "../images/circle-o.svg";
-import Circle from "../images/circle.svg";
 import Cursor from "../images/cursor.svg";
-import DoubleLines from "../images/double-lines.svg";
-import DoubleLinesDot from "../images/double-lines-dot.svg";
-import TripleLines from "../images/triple-lines.svg";
 
 const Home = () => {
 	return (
 		<div className="home">
 			<Landing />
-			<button className="join">Join Us</button>
+			<a
+				href="https://docs.google.com/forms/d/e/1FAIpQLSdQtcJtHljZQxD7LLw7Rmq2N8ISO8Xa2kblnPbiG11kvVxsEA/viewform"
+				target="_blank"
+				rel="noopener noreferrer"
+				className="join button">
+				Join Us
+			</a>
 			<div className="window-cards-container">
-				<img className="svg-1" src={CircleO} alt="circleo" />
-				<img className="svg-2" src={TripleLines} alt="tripleLines" />
-				<img className="svg-3" src={DoubleLinesDot} alt="lines" />
-				<img className="svg-4" src={DoubleLinesDot} alt="lines" />
-				<img className="svg-5" src={CircleO} alt="circleo" />
-				<img className="svg-6" src={TripleLines} alt="tripleLines" />
-				<img className="svg-7" src={CircleO} alt="circleo" />
-				<img className="svg-8" src={CircleO} alt="circleo" />
-				<img className="svg-9" src={DoubleLines} alt="lines" />
-				<img className="svg-10" src={Circle} alt="circle" />
+				<BackgroundSVG />
 
 				<article className="window-card">
 					<div className="window-card-top-menu">
@@ -34,7 +27,7 @@ const Home = () => {
 					</div>
 					<div className="window-card-texts">
 						<h3 className="window-card-texts-title">
-							<span>work</span>shops
+							<span className="font-blue">work</span>shops
 						</h3>
 						<p className="window-card-texts-body">
 							We know how hard it can be to learn new skills and technologies apart from those taught in
@@ -61,7 +54,8 @@ const Home = () => {
 					<div className="window-card-texts">
 						<h3 className="window-card-texts-title">
 							<img src={Cursor} alt="cursor" />
-							company <span>tours</span> & guest <span>speakers</span>
+							company <span className="font-blue">tours</span> & guest{" "}
+							<span className="font-blue">speakers</span>
 						</h3>
 						<p className="window-card-texts-body">
 							Our chapter has connections with people across multiple companies so we can share special
@@ -82,7 +76,7 @@ const Home = () => {
 					</div>
 					<div className="window-card-texts">
 						<h3 className="window-card-texts-title">
-							engineering project <span>programs</span>
+							engineering project <span className="font-blue">programs</span>
 						</h3>
 						<p className="window-card-texts-body">
 							One of the most important parts of being a software engineer that isn’t taught in schools
@@ -109,7 +103,7 @@ const Home = () => {
 					</div>
 					<div className="window-card-texts">
 						<h3 className="window-card-texts-title">
-							hack<span>ACM</span> & interns
+							hack<span className="font-blue">ACM</span> & interns
 						</h3>
 						<p className="window-card-texts-body">
 							Hackathons are a great way to get started on a project, but they can be really intimidating
@@ -133,7 +127,7 @@ const Home = () => {
 					</div>
 					<div className="window-card-texts">
 						<h3 className="window-card-texts-title">
-							code structure <span>reviews</span>
+							code structure <span className="font-blue">reviews</span>
 						</h3>
 						<p className="window-card-texts-body">
 							Code structure and cleanliness can be a huge factor in job/internship interview success as

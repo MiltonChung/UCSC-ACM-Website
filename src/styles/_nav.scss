@@ -29,3 +29,19 @@ nav {
 		}
 	}
 }
+
+@media only screen and (max-width: 425px) {
+	nav {
+		padding: 1rem 1.5rem;
+
+		ul {
+			justify-content: space-between;
+			li {
+				margin-left: 0rem;
+				svg {
+					width: 25px;
+				}
+			}
+		}
+	}
+}

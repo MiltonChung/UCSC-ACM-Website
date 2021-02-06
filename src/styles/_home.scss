@@ -19,6 +19,7 @@
 	display: flex;
 	justify-content: center;
 	width: 100%;
+	padding-bottom: 3rem;
 
 	&-texts {
 		display: flex;
@@ -61,9 +62,60 @@
 			text-align: center;
 		}
 	}
+
+	@media only screen and (max-width: 1024px) {
+		background-image: linear-gradient(
+				to top,
+				rgba(29, 30, 38, 0.9),
+				rgba(29, 30, 38, 0.6),
+				rgba(29, 30, 38, 0.3)
+			),
+			url("../images/background-banner.png");
+		background-position: center right;
+		background-repeat: no-repeat;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+	}
+
+	@media only screen and (max-width: 768px) {
+		background-attachment: scroll;
+		padding-bottom: 2rem;
+		min-height: 82vh;
+		&-texts {
+			width: 80%;
+			padding: 1.5rem 0;
+			text-shadow: 2px 2px 3px rgb(0, 0, 0);
+		}
+	}
+
+	@media only screen and (max-width: 450px) {
+		&-texts {
+			width: 90%;
+			padding: 1rem 0;
+
+			&-logo {
+				width: 80px;
+			}
+
+			&-title {
+				font-size: 75px;
+			}
+
+			&-subtitle {
+				font-size: 18px;
+			}
+
+			&-description {
+				font-size: 18px;
+				font-weight: 600;
+			}
+		}
+	}
 }
 
-button.join {
+a.join {
 	font-size: 33px;
 	font-weight: 400;
 	text-align: center;
@@ -75,9 +127,15 @@ button.join {
 	text-decoration: underline;
 	color: $acm-pink;
 	transition: all 0.5s;
-}
 
-button.join:hover {
+	@media only screen and (max-width: 768px) {
+		border: 5px $acm-gray solid;
+		padding: 0.5rem 3rem;
+		font-size: 27px;
+		margin-top: -2rem;
+	}
+}
+a.join:hover {
 	background: $acm-pink;
 	color: $acm-gray;
 	border: 5px white solid;
@@ -91,120 +149,128 @@ button.join:hover {
 	justify-content: center;
 	width: 100%;
 
-	.svg-1 {
-		@include svg-placer(5%, unset, 5%, unset);
-	}
-	.svg-2 {
-		@include svg-placer(1%, unset, 15%, unset);
-	}
-	.svg-3 {
-		@include svg-placer(15%, unset, -2%, unset);
-	}
-	.svg-4 {
-		@include svg-placer(20%, unset, unset, 10%);
-	}
-	.svg-5 {
-		@include svg-placer(38%, unset, 5%, unset);
-	}
-	.svg-6 {
-		@include svg-placer(55%, unset, 16%, unset);
-	}
-	.svg-7 {
-		@include svg-placer(unset, 25%, 5%, unset);
-	}
-	.svg-8 {
-		@include svg-placer(unset, 35%, unset, 15%);
-	}
-	.svg-9 {
-		@include svg-placer(unset, 10%, 16%, unset);
-	}
-	.svg-10 {
-		@include svg-placer(unset, 1%, unset, 12%);
-	}
-}
+	.window-card {
+		width: 60vw;
+		min-height: 500px;
+		height: fit-content;
+		background: $acm-gray;
+		border-radius: 20px;
+		box-shadow: 2px 4px 7px 0px rgba(0, 0, 0, 0.15);
+		overflow: hidden;
+		margin: 3rem 0;
+		z-index: 2;
 
-.window-card {
-	width: 60vw;
-	min-height: 500px;
-	height: fit-content;
-	background: $acm-gray;
-	border-radius: 20px;
-	box-shadow: 2px 4px 7px 0px rgba(0, 0, 0, 0.15);
-	overflow: hidden;
-	margin: 3rem 0;
-	z-index: 2;
-
-	&-top-menu {
-		height: 65px;
-		background: $acm-black;
-		display: flex;
-		align-items: center;
-
-		padding-left: 1.2rem;
-
-		.red-circle {
-			@include window-card-circles($acm-pink);
-		}
-		.yellow-circle {
-			@include window-card-circles($acm-yellow);
-		}
-		.green-circle {
-			@include window-card-circles($acm-green);
-		}
-		.red-circle:hover,
-		.yellow-circle:hover,
-		.green-circle:hover {
-			opacity: 0.8;
-		}
-	}
-
-	&-texts {
-		padding: 1.5rem;
-
-		&-title {
-			margin-bottom: 1.5rem;
-			position: relative;
-			width: fit-content;
-
-			img {
-				position: absolute;
-				right: -20px;
-				bottom: -18px;
-			}
-
-			span {
-				color: $acm-blue;
-				font-family: $acm-font;
-			}
-		}
-
-		&-body {
-			font-size: 24px;
-			font-weight: 400;
-			line-height: 35px;
-		}
-	}
-
-	&-button {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin-top: 1rem;
-		margin-bottom: 3rem;
-
-		button {
+		&-top-menu {
+			height: 65px;
 			background: $acm-black;
-			font-size: 33px;
-			font-weight: 400;
-			color: $acm-white;
-			padding: 0.5rem 3rem;
-			border: 3px $acm-black solid;
-			transition: all 0.5s;
-			box-shadow: 0px 5px 20px 8px rgba(7, 6, 0, 0.25);
+			display: flex;
+			align-items: center;
+
+			padding-left: 1.2rem;
+
+			.red-circle {
+				@include window-card-circles($acm-pink);
+			}
+			.yellow-circle {
+				@include window-card-circles($acm-yellow);
+			}
+			.green-circle {
+				@include window-card-circles($acm-green);
+			}
+			.red-circle:hover,
+			.yellow-circle:hover,
+			.green-circle:hover {
+				opacity: 0.8;
+			}
 		}
-		button:hover {
-			color: $acm-black;
-			background: $acm-gray;
+
+		&-texts {
+			padding: 1.5rem;
+
+			&-title {
+				margin-bottom: 1.5rem;
+				position: relative;
+				width: fit-content;
+				line-height: 50px;
+
+				img {
+					position: absolute;
+					right: -20px;
+					bottom: -18px;
+				}
+			}
+
+			&-body {
+				font-size: 24px;
+				font-weight: 400;
+				line-height: 35px;
+			}
+		}
+
+		&-button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 1rem;
+			margin-bottom: 3rem;
+
+			button {
+				background: $acm-black;
+				font-size: 33px;
+				font-weight: 400;
+				color: $acm-white;
+				padding: 0.5rem 3rem;
+				border: 3px $acm-black solid;
+				transition: all 0.5s;
+				box-shadow: 0px 5px 20px 8px rgba(7, 6, 0, 0.25);
+			}
+			button:hover {
+				color: $acm-black;
+				background: $acm-gray;
+			}
+		}
+
+		@media only screen and (max-width: 768px) {
+			width: 88%;
+		}
+		@media only screen and (max-width: 450px) {
+			width: 93%;
+			min-height: fit-content;
+			height: fit-content;
+
+			&-top-menu {
+				height: 40px;
+				padding-left: 1.4rem;
+			}
+
+			&-texts {
+				padding: 1.5rem 1.1rem;
+
+				&-title {
+					font-size: 45px;
+					margin-bottom: 1rem;
+					img {
+						right: 0px;
+					}
+				}
+
+				&-body {
+					font-size: 18px;
+					line-height: 28px;
+				}
+			}
+
+			&-button {
+				margin-top: 0rem;
+				margin-bottom: 1.5rem;
+
+				button {
+					font-size: 24px;
+					padding: 0.5rem 2rem;
+					border: 2px $acm-black solid;
+					transition: all 0.5s;
+				}
+			}
 		}
 	}
 }
