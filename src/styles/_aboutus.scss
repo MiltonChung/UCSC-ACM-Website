@@ -100,14 +100,13 @@
 		flex-direction: row;
 		justify-content: center;
 		align-items: flex-end;
-		margin-top: 5rem;
+		margin: 5rem 1rem 0 1rem;
 		img {
 			border: black solid 2px;
 			vertical-align: middle;
 			width: 130px;
 			height: 130px;
 			object-fit: cover;
-			// image-rendering: crisp-edges;
 			image-rendering: auto;
 			border-radius: 50%;
 			margin-right: 2rem;
@@ -115,11 +114,12 @@
 		}
 
 		.chat-bubble {
-			&-names {
+			&-name {
 				font-family: Oswald;
 				font-size: 24px;
 				font-weight: 400;
 				margin-left: 2rem;
+				width: fit-content;
 			}
 			&-text {
 				position: relative;
@@ -147,6 +147,71 @@
 				bottom: 6px;
 			}
 		}
+
+		@media only screen and (max-width: 768px) {
+			img {
+				width: 110px;
+				height: 110px;
+				margin-right: 1.5rem;
+			}
+			.chat-bubble {
+				&-name {
+					font-size: 20px;
+				}
+				&-text {
+					line-height: 30px;
+					font-size: 20px;
+					border-radius: 30px;
+					padding: 1rem 1.5rem;
+				}
+			}
+		}
+
+		@media only screen and (max-width: 550px) {
+			flex-direction: column;
+			align-items: flex-start;
+			img {
+				width: 80px;
+				height: 80px;
+				margin-right: 0;
+				margin-bottom: -1.4rem;
+			}
+			.chat-bubble {
+				&-name {
+					margin-left: 5.5rem;
+					margin-top: -2rem;
+					margin-bottom: 1.8rem;
+				}
+				&-text {
+					line-height: 25px;
+					font-size: 18px;
+					border-radius: 15px;
+					padding: 1rem;
+				}
+				&-bottom-left:before {
+					display: none;
+				}
+			}
+		}
+
+		@media only screen and (max-width: 380px) {
+			img {
+				width: 50px;
+				height: 50px;
+			}
+			.chat-bubble {
+				&-name {
+					margin-left: 3.8rem;
+					margin-top: -1.2rem;
+					margin-bottom: 1.2rem;
+					font-size: 16.5px;
+				}
+				&-text {
+					line-height: 22px;
+					font-size: 16px;
+				}
+			}
+		}
 	}
 
 	.board-member-right {
@@ -154,8 +219,8 @@
 		flex-direction: row;
 		justify-content: center;
 		align-items: flex-end;
-		margin-top: 5rem;
-		margin-bottom: 2rem;
+		margin: 5rem 1rem 2rem 1rem;
+
 		img {
 			border: black solid 2px;
 			vertical-align: auto;
@@ -174,6 +239,7 @@
 				font-weight: 400;
 				margin-right: 2rem;
 				text-align: right;
+				width: fit-content;
 			}
 			&-text {
 				position: relative;
@@ -199,6 +265,76 @@
 				border-bottom: 20px solid $acm-yellow;
 				right: -10px;
 				bottom: 6px;
+			}
+		}
+
+		@media only screen and (max-width: 768px) {
+			img {
+				width: 110px;
+				height: 110px;
+				margin-left: 1.5rem;
+			}
+			.chat-bubble {
+				&-name {
+					font-size: 20px;
+				}
+				&-text {
+					line-height: 30px;
+					font-size: 20px;
+					border-radius: 30px;
+					padding: 1rem 1.5rem;
+				}
+			}
+		}
+
+		@media only screen and (max-width: 550px) {
+			flex-direction: column;
+			align-items: flex-end;
+			img {
+				order: 1;
+				width: 80px;
+				height: 80px;
+				margin-right: 0;
+				margin-bottom: -1.4rem;
+			}
+			.chat-bubble {
+				order: 2;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+				&-name {
+					margin-right: 5.5rem;
+					margin-top: -2rem;
+					margin-bottom: 1.8rem;
+				}
+				&-text {
+					line-height: 25px;
+					font-size: 18px;
+					border-radius: 15px;
+					padding: 1rem;
+				}
+				&-bottom-right:before {
+					display: none;
+				}
+			}
+		}
+
+		@media only screen and (max-width: 380px) {
+			img {
+				width: 50px;
+				height: 50px;
+			}
+			.chat-bubble {
+				&-name {
+					margin-right: 3.8rem;
+					margin-top: -1.2rem;
+					margin-bottom: 1.2rem;
+					font-size: 16.5px;
+				}
+				&-text {
+					line-height: 22px;
+					font-size: 16px;
+				}
 			}
 		}
 	}
