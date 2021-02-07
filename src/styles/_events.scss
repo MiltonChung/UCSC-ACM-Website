@@ -21,11 +21,113 @@
 
 			.window-card {
 				width: 100%;
+				&-texts {
+					padding: 1rem;
+					word-wrap: break-word;
+				}
 				&-texts,
 				&-texts-title {
 					width: 100%;
 					text-align: center;
 					line-height: 58px;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.events {
+		width: 92%;
+		padding-bottom: 6rem;
+
+		&-calendar {
+			h3 {
+				margin: 2rem 0;
+				line-height: 50px;
+				text-align: center;
+			}
+		}
+
+		&-upcoming {
+			margin: 6rem 0 2rem 0;
+			&-windows {
+				grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+				column-gap: 2rem;
+
+				.window-card {
+					height: fit-content;
+					min-height: unset;
+					padding-bottom: 2rem;
+					&-texts {
+						&-title {
+							font-size: 40px;
+						}
+						&-body {
+							p {
+								font-size: 22px;
+								line-height: 22px;
+								margin-bottom: 1rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.events {
+		width: 93%;
+		&-upcoming {
+			&-windows {
+				grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+				.window-card {
+					padding-bottom: 1rem;
+					&-texts {
+						&-title {
+							font-size: 30px;
+							line-height: 40px;
+						}
+						&-body {
+							p {
+								font-size: 20px;
+								margin-bottom: 0.6rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.events {
+		width: 93%;
+
+		h3 {
+			font-size: 40px;
+			line-height: 40px;
+		}
+		&-upcoming {
+			&-windows {
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+				.window-card {
+					padding-bottom: 1rem;
+					&-texts {
+						&-title {
+							font-size: 30px;
+							line-height: 40px;
+						}
+						&-body {
+							p {
+								font-size: 20px;
+								margin-bottom: 0.6rem;
+							}
+						}
+					}
 				}
 			}
 		}

@@ -14,7 +14,15 @@ const IndividualEvent = ({ eventName, start, end, description, location }) => {
 				<h3 className="window-card-texts-title">{eventName}</h3>
 				<div className="window-card-texts-body">
 					<p className="italicize">{eventHourFormatter(start, end)}</p>
-					<p className="italicize">{location}</p>
+					<p className="italicize">
+						{location.includes("https://") ? (
+							<a href={location} target="_blank" rel="noopener noreferrer">
+								{location}
+							</a>
+						) : (
+							location
+						)}
+					</p>
 					<p>{description}</p>
 				</div>
 			</div>

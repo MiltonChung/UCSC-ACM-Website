@@ -1,28 +1,31 @@
 // Calendar
+.calendar {
+	overflow-x: auto;
+	border: 1px solid rgb(218, 218, 218);
+	padding: 0.2rem;
+}
+.rbc-calendar {
+	min-width: 1000px;
+}
+// Title MONTH YEAR
 .rbc-toolbar .rbc-toolbar-label {
-	font-size: 29px;
+	font-size: 30px;
 	font-family: $acm-font;
 	font-weight: 600;
 }
+
 .rbc-row-segment .rbc-event-content {
 	text-overflow: unset;
 	white-space: unset;
 	overflow: unset;
 	overflow-wrap: anywhere;
-	-webkit-user-select: text;
-	-moz-user-select: text;
 	cursor: text;
 	strong,
 	span {
 		font-family: $acm-secondary-font;
 	}
 }
-.rbc-event.rbc-selected {
-	background: $acm-blue !important;
-	outline: none;
-	cursor: text;
-}
-
+// Individual event
 .rbc-event {
 	border-radius: 10px;
 	padding: 0.3rem;
@@ -33,14 +36,45 @@
 	}
 	.rbc-event-content {
 		cursor: text;
-
 		.calendar-month {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 			padding: 0.2rem;
 			overflow-wrap: anywhere;
-			-webkit-user-select: text;
-			-moz-user-select: text;
+			p {
+				margin-top: 0.34rem;
+				text-align: center;
+			}
+			h4 {
+				text-align: center;
+				font-family: $acm-secondary-font;
+				font-size: 18px;
+			}
 		}
 	}
+
+	@media only screen and (max-width: 768px) {
+		border-radius: 8px;
+		padding: 0.2rem;
+		.rbc-event-content {
+			.calendar-month {
+				padding: 0.1rem;
+				p {
+					margin-top: 0.3rem;
+					font-size: 14px;
+				}
+				h4 {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
+.rbc-event.rbc-selected {
+	background: $acm-blue !important;
+	outline: none;
+	cursor: text;
 }
 
 .rbc-month-row {
@@ -56,24 +90,5 @@
 .calendar-agenda {
 	h4 {
 		color: $acm-blue;
-	}
-}
-
-.rbc-calendar {
-	min-width: 1000px;
-}
-
-.calendar-month {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	p {
-		margin-top: 0.34rem;
-		text-align: center;
-	}
-	h4 {
-		text-align: center;
-		font-family: $acm-secondary-font;
-		font-size: 18px;
 	}
 }
