@@ -1,25 +1,13 @@
 import React from "react";
+// Component
+import BackgroundSVG from "../components/BackgroundSVG";
 // Icons
-import CircleO from "../images/circle-o.svg";
-import Circle from "../images/circle.svg";
-import DoubleLines from "../images/double-lines.svg";
-import DoubleLinesDot from "../images/double-lines-dot.svg";
-import TripleLines from "../images/triple-lines.svg";
 import Arrow from "../images/arrow.svg";
 
 const Resources = () => {
 	return (
 		<div className="resources">
-			<img className="svg-1" src={CircleO} alt="circleo" />
-			<img className="svg-2" src={TripleLines} alt="tripleLines" />
-			<img className="svg-3" src={DoubleLinesDot} alt="lines" />
-			<img className="svg-4" src={DoubleLinesDot} alt="lines" />
-			<img className="svg-5" src={CircleO} alt="circleo" />
-			<img className="svg-6" src={TripleLines} alt="tripleLines" />
-			<img className="svg-7" src={CircleO} alt="circleo" />
-			<img className="svg-8" src={CircleO} alt="circleo" />
-			<img className="svg-9" src={DoubleLines} alt="lines" />
-			<img className="svg-10" src={Circle} alt="circle" />
+			<BackgroundSVG />
 
 			<h2>
 				curated resources list-- just for <span className="font-blue">you</span>
@@ -27,7 +15,10 @@ const Resources = () => {
 
 			<div className="survive">
 				<h3>
-					<span className="font-blue">💪 surviving CS</span> at UCSC 💪
+					<span className="font-blue">
+						<span className="emoji">💪</span> surviving CS
+					</span>{" "}
+					at UCSC <span className="emoji">💪</span>
 				</h3>
 				<p>Need advice?</p>
 				<p>
@@ -99,7 +90,8 @@ const Resources = () => {
 
 			<div className="dream-job">
 				<h3>
-					😎 getting that <span className="font-blue">dream</span> internship or job 😎
+					<span className="emoji">😎</span> getting that <span className="font-blue">dream</span>{" "}
+					internship or job <span className="emoji">😎</span>
 				</h3>
 				<p className="bold">Fill this out!</p>
 				<div className="answer">

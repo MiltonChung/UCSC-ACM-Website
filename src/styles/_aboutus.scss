@@ -1,6 +1,10 @@
 .aboutus {
 	position: relative;
 	padding-bottom: 15rem;
+
+	@media only screen and (max-width: 768px) {
+		padding-bottom: 8rem;
+	}
 }
 
 .aboutus-body {
