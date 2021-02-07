@@ -63,3 +63,103 @@
 	z-index: 5;
 	margin-top: 8rem;
 }
+
+@media only screen and (max-width: 876px) {
+	.leftSide {
+		margin-right: 4rem;
+
+		h2 {
+			margin-top: 5rem;
+		}
+		.icon-holder {
+			margin-top: 5rem;
+			padding: 1rem 2rem;
+			border-radius: 15px;
+
+			.email {
+				width: 70px;
+			}
+			.facebook {
+				width: 50px;
+				margin: 0 5rem;
+			}
+			.slack {
+				width: 67px;
+			}
+		}
+	}
+
+	.rightSide {
+		margin-top: 8rem;
+	}
+}
+
+@media only screen and (max-width: 654px) {
+	.contact {
+		flex-direction: column;
+		width: 90%;
+		height: 120%;
+		padding-bottom: 6rem;
+	}
+
+	.leftSide {
+		margin-right: 0rem;
+
+		h2 {
+			margin-top: 4rem;
+			text-align: center;
+		}
+		.icon-holder {
+			margin-top: 4rem;
+			padding: 1rem 1.3rem;
+			border-radius: 15px;
+
+			.email {
+				width: 70px;
+			}
+			.facebook {
+				width: 50px;
+				margin: 0 4rem;
+			}
+			.slack {
+				width: 67px;
+			}
+		}
+	}
+
+	.rightSide {
+		margin: 2.5rem 0;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.contact {
+		width: 90%;
+	}
+
+	.leftSide {
+		h2 {
+			margin-top: 3rem;
+			font-size: 50px;
+		}
+		.icon-holder {
+			margin-top: 3rem;
+			padding: 1rem;
+
+			.email {
+				width: 60px;
+			}
+			.facebook {
+				width: 40px;
+				margin: 0 3rem;
+			}
+			.slack {
+				width: 57px;
+			}
+		}
+	}
+
+	.rightSide {
+		margin-top: 4rem;
+	}
+}
