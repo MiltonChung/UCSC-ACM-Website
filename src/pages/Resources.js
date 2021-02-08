@@ -84,8 +84,8 @@ const Resources = () => {
 						.
 					</p>
 				</div>
-				<p>Here’s some advice from officers.</p>
-				<p>--INSET ADVICE HERE--</p>
+				{/* <p>Here’s some advice from officers.</p>
+				<p>--INSET ADVICE HERE--</p> */}
 			</div>
 
 			<div className="dream-job">
