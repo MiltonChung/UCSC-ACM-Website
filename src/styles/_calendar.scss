@@ -19,7 +19,7 @@
 	white-space: unset;
 	overflow: unset;
 	overflow-wrap: anywhere;
-	cursor: text;
+	cursor: default;
 	strong,
 	span {
 		font-family: $acm-secondary-font;
@@ -35,7 +35,7 @@
 		display: none;
 	}
 	.rbc-event-content {
-		cursor: text;
+		cursor: default;
 		.calendar-month {
 			display: flex;
 			flex-direction: column;

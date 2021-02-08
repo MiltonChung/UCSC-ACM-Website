@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
-// import BlockContent from "@sanity/block-content-to-react";
 import sanityClient from "../../sanity";
+import { eventHourFormatter } from "../../util";
 
 const localizer = momentLocalizer(moment);
 
@@ -26,19 +26,6 @@ function Event({ event }) {
 		</span>
 	);
 }
-
-const eventHourFormatter = (start, end) => {
-	const options = {
-		hour: "numeric",
-		minute: "numeric",
-		hour12: true,
-	};
-	start = new Date(start);
-	end = new Date(end);
-	const startString = start.toLocaleString("en-US", options);
-	const endString = end.toLocaleString("en-US", options);
-	return `${startString} ~ ${endString}`;
-};
 
 const ColoredDateCellWrapper = ({ children }) =>
 	React.cloneElement(React.Children.only(children), {

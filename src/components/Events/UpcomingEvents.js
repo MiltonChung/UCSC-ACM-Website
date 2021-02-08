@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import sanityClient from "../../sanity";
 import Loading from "../Loading";
+import { eventHourFormatter } from "../../util";
 
 const IndividualEvent = ({ eventName, start, end, description, location }) => {
 	return (
@@ -13,7 +14,8 @@ const IndividualEvent = ({ eventName, start, end, description, location }) => {
 			<div className="window-card-texts">
 				<h3 className="window-card-texts-title">{eventName}</h3>
 				<div className="window-card-texts-body">
-					<p className="italicize">{eventHourFormatter(start, end)}</p>
+					<p className="italicize">{dateFormatter(start)}</p>
+					<p className="italicize">from {eventHourFormatter(start, end)}</p>
 					<p className="italicize">
 						{location.includes("https://") ? (
 							<a href={location} target="_blank" rel="noopener noreferrer">
@@ -30,17 +32,35 @@ const IndividualEvent = ({ eventName, start, end, description, location }) => {
 	);
 };
 
-const eventHourFormatter = (start, end) => {
-	const options = {
-		hour: "numeric",
-		minute: "numeric",
-		hour12: true,
+const dateFormatter = start => {
+	const numToDay = {
+		0: "Sunday",
+		1: "Monday",
+		2: "Tuesday",
+		3: "Wednesday",
+		4: "Thursday",
+		5: "Friday",
+		6: "Saturday",
 	};
+	const monthNames = [
+		"January",
+		"February",
+		"March",
+		"April",
+		"May",
+		"June",
+		"July",
+		"August",
+		"September",
+		"October",
+		"November",
+		"December",
+	];
 	start = new Date(start);
-	end = new Date(end);
-	const startString = start.toLocaleString("en-US", options);
-	const endString = end.toLocaleString("en-US", options);
-	return `${startString} ~ ${endString}`;
+	const date = start.getDate();
+	const dayOfWeek = numToDay[start.getDay()];
+	const month = monthNames[start.getMonth()];
+	return `${dayOfWeek}, ${month} ${date}`;
 };
 
 const UpcomingEvents = () => {
