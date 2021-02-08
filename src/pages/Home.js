@@ -91,7 +91,9 @@ const Home = () => {
 						</p>
 					</div>
 					<div className="window-card-button">
-						<button>Sign Up</button>
+						<a href="/" target="_blank" rel="noopener noreferrer" className="button">
+							Sign Up
+						</a>
 					</div>
 				</article>
 
@@ -141,7 +143,13 @@ const Home = () => {
 						</p>
 					</div>
 					<div className="window-card-button">
-						<button>Submit</button>
+						<a
+							href="https://docs.google.com/forms/d/e/1FAIpQLSd2Q7O4nZEUfmQaCFXWaSSCW2mnpMoz56xwA8r9daFD0PZlVQ/viewform"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="button">
+							Submit
+						</a>
 					</div>
 				</article>
 			</div>
