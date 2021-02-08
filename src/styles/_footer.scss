@@ -1,9 +1,27 @@
 .footer {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	margin-top: 3rem;
-	margin-bottom: 2rem;
-	position: absolute;
+	align-items: center;
+	margin-bottom: 1rem;
+	// position: absolute;
 	width: 100%;
-	bottom: 0;
+	// bottom: 0;
+
+	img {
+		width: 75px;
+		height: auto;
+		margin-bottom: 0.5rem;
+	}
+
+	&-socials {
+		display: flex;
+		align-items: flex-start;
+		margin-top: 0.5rem;
+		column-gap: 0.4rem;
+		svg {
+			width: 25px;
+			height: auto;
+		}
+	}
 }
