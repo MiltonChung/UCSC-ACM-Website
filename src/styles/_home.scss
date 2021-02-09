@@ -141,6 +141,60 @@ a.join:hover {
 	border: 5px white solid;
 }
 
+// .rec-carousel-wrapper {
+// 	width: 90% !important;
+// 	margin: 0 auto;
+
+// 	.rec.rec-slider-container {
+// 		width: 80%;
+// 		margin: 0 auto;
+// 		.rec-slider {
+// 			height: fit-content;
+// 			.rec-swipable {
+// 				height: fit-content;
+// 				.rec-carousel-item {
+// 					height: fit-content;
+// 				}
+// 			}
+// 		}
+// 	}
+
+// 	.rec.rec-arrow {
+// 		border-radius: 0;
+// 		background: none;
+// 		border: none;
+// 		box-shadow: none;
+// 		min-width: 20px;
+// 		width: 20px;
+// 	}
+// 	.rec.rec-arrow:hover:not(:disabled) {
+// 		background: none;
+// 		border: none;
+// 		box-shadow: none;
+// 		color: $acm-blue;
+// 	}
+// 	.rec.rec-arrow:focus {
+// 		background: none;
+// 		border: none;
+// 		box-shadow: none;
+// 		color: $acm-black;
+// 	}
+// }
+
+.BrainhubCarousel__container {
+	width: 90% !important;
+	margin: 0 auto;
+
+	.BrainhubCarousel__arrowLeft,
+	.BrainhubCarousel__arrowRight {
+		background: $acm-blue;
+	}
+	.BrainhubCarousel__arrows.BrainhubCarousel__arrowLeft:hover,
+	.BrainhubCarousel__arrows.BrainhubCarousel__arrowRight:hover {
+		background: $acm-pink;
+	}
+}
+
 .window-cards-container {
 	position: relative;
 	display: flex;
@@ -211,8 +265,8 @@ a.join:hover {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-top: 1rem;
-		margin-bottom: 3rem;
+		margin-top: 0rem;
+		margin-bottom: 1rem;
 
 		a {
 			background: $acm-black;
@@ -223,7 +277,7 @@ a.join:hover {
 			border: 3px $acm-black solid;
 			transition: all 0.5s;
 			text-decoration: none;
-			box-shadow: 0px 5px 20px 8px rgba(7, 6, 0, 0.25);
+			box-shadow: 3px 3px 7px rgba(7, 6, 0, 0.25);
 		}
 		a:hover {
 			color: $acm-black;
