@@ -1,6 +1,6 @@
 import React from "react";
 // React Router
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 // Icons
 import { Icon } from "@iconify/react";
 import Home from "@iconify/icons-ant-design/home-outlined";
@@ -8,10 +8,15 @@ import AboutUs from "@iconify/icons-fluent/people-team-16-filled";
 import Events from "@iconify/icons-ion/calendar-outline";
 import Resources from "@iconify/icons-ant-design/folder-open-filled";
 import Contact from "@iconify/icons-grommet-icons/contact";
+import Logo from "../images/dark-logo.svg";
 
 const Nav = () => {
 	return (
 		<nav>
+			<Link to="/" className="nav-logo">
+				<img src={Logo} alt="logo" />
+			</Link>
+
 			<ul>
 				<li>
 					<NavLink to="/" title="Home" activeClassName="selected" exact>
