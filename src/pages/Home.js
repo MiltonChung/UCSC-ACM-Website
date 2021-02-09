@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Carousel, { autoplayPlugin } from "@brainhubeu/react-carousel";
-import "@brainhubeu/react-carousel/lib/style.css";
-// import Carousel from "react-elastic-carousel";
-// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+// import Carousel from "@brainhubeu/react-carousel";
+// import "@brainhubeu/react-carousel/lib/style.css";
+import Carousel from "react-elastic-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 // import { Carousel } from "react-responsive-carousel";
 // Components
 import Landing from "../components/Home/Landing";
@@ -12,20 +12,7 @@ import Cursor from "../images/cursor.svg";
 
 const RenderCarousel = () => {
 	return (
-		<Carousel
-			animationSpeed={700}
-			plugins={[
-				"centered",
-				"infinite",
-				"arrows",
-				"fastSwipe",
-				{
-					resolve: autoplayPlugin,
-					options: {
-						interval: 4300,
-					},
-				},
-			]}>
+		<Carousel>
 			<article className="window-card">
 				<div className="window-card-top-menu">
 					<div className="red-circle"></div>

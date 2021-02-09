@@ -141,59 +141,70 @@ a.join:hover {
 	border: 5px white solid;
 }
 
-// .rec-carousel-wrapper {
-// 	width: 90% !important;
-// 	margin: 0 auto;
-
-// 	.rec.rec-slider-container {
-// 		width: 80%;
-// 		margin: 0 auto;
-// 		.rec-slider {
-// 			height: fit-content;
-// 			.rec-swipable {
-// 				height: fit-content;
-// 				.rec-carousel-item {
-// 					height: fit-content;
-// 				}
-// 			}
-// 		}
-// 	}
-
-// 	.rec.rec-arrow {
-// 		border-radius: 0;
-// 		background: none;
-// 		border: none;
-// 		box-shadow: none;
-// 		min-width: 20px;
-// 		width: 20px;
-// 	}
-// 	.rec.rec-arrow:hover:not(:disabled) {
-// 		background: none;
-// 		border: none;
-// 		box-shadow: none;
-// 		color: $acm-blue;
-// 	}
-// 	.rec.rec-arrow:focus {
-// 		background: none;
-// 		border: none;
-// 		box-shadow: none;
-// 		color: $acm-black;
-// 	}
-// }
-
-.BrainhubCarousel__container {
+.rec-carousel-wrapper {
 	width: 90% !important;
 	margin: 0 auto;
 
-	.BrainhubCarousel__arrowLeft,
-	.BrainhubCarousel__arrowRight {
-		background: $acm-blue;
+	.rec.rec-slider-container {
+		width: 80%;
+		margin: 0 auto;
+		.rec-slider {
+			height: fit-content;
+			.rec-swipable {
+				height: fit-content;
+				.rec-carousel-item {
+					height: fit-content;
+				}
+			}
+		}
 	}
-	.BrainhubCarousel__arrows.BrainhubCarousel__arrowLeft:hover,
-	.BrainhubCarousel__arrows.BrainhubCarousel__arrowRight:hover {
+
+	.rec.rec-arrow {
+		border-radius: 50%;
+		background: $acm-blue;
+		border: none;
+		box-shadow: none;
+		min-width: 20px;
+		color: $acm-white;
+	}
+	.rec.rec-arrow:hover:not(:disabled) {
 		background: $acm-pink;
+		border: none;
+		box-shadow: none;
+		color: $acm-white;
+	}
+	.rec.rec-arrow:disabled {
+		background: #0092d062;
+		border: none;
+		box-shadow: none;
+		color: $acm-white;
+	}
+	.rec.rec-arrow:focus {
+		background: $acm-blue;
+		border: none;
+		box-shadow: none;
+		color: $acm-white;
+	}
+
+	.rec-dot.rec.rec-dot_active {
+		background-color: $acm-blue;
+		box-shadow: 0 0 1px 3px rgba(0, 39, 83, 0.884);
 	}
 }
+
+// .BrainhubCarousel__container {
+// 	width: 90% !important;
+// 	margin: 0 auto;
+
+// 	.BrainhubCarousel__arrowLeft,
+// 	.BrainhubCarousel__arrowRight {
+// 		background: $acm-blue;
+// 	}
+// 	.BrainhubCarousel__arrows.BrainhubCarousel__arrowLeft:hover,
+// 	.BrainhubCarousel__arrows.BrainhubCarousel__arrowRight:hover {
+// 		background: $acm-pink;
+// 	}
+// }
 
 .window-cards-container {
 	position: relative;
