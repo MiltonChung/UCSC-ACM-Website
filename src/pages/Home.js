@@ -117,7 +117,7 @@ const RenderCarousel = () => {
 						Hackathons are a great way to get started on a project, but they can be really intimidating at
 						times, which is why we created HackACM.{" "}
 						<span className="bold">HackACM is a beginner friendly hackathon</span> and serves as a great
-						introduction to hackathons. In the past, we’ve had sponsors such as
+						introduction to hackathons. In the past, we’ve had sponsors such as{" "}
 						<span className="bold">Amazon and Looker</span> and{" "}
 						<span className="bold">thousands of dollars in prizes.</span> This year will be our 3rd time
 						hosting HackACM and{" "}
@@ -255,7 +255,7 @@ const RenderWindows = () => {
 						Hackathons are a great way to get started on a project, but they can be really intimidating at
 						times, which is why we created HackACM.{" "}
 						<span className="bold">HackACM is a beginner friendly hackathon</span> and serves as a great
-						introduction to hackathons. In the past, we’ve had sponsors such as
+						introduction to hackathons. In the past, we’ve had sponsors such as{" "}
 						<span className="bold">Amazon and Looker</span> and{" "}
 						<span className="bold">thousands of dollars in prizes.</span> This year will be our 3rd time
 						hosting HackACM and{" "}
