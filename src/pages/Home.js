@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
-// import Carousel from "@brainhubeu/react-carousel";
-// import "@brainhubeu/react-carousel/lib/style.css";
 import Carousel from "react-elastic-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-// import { Carousel } from "react-responsive-carousel";
+// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 // Components
 import Landing from "../components/Home/Landing";
 import BackgroundSVG from "../components/BackgroundSVG";

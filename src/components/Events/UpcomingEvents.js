@@ -18,7 +18,7 @@ const IndividualEvent = ({ eventName, start, end, description, location }) => {
 					<p className="italicize">from {eventHourFormatter(start, end)}</p>
 					<p className="italicize">
 						{location.includes("https://") ? (
-							<a href={location} target="_blank" rel="noopener noreferrer">
+							<a key={Math.random()} href={location} target="_blank" rel="noopener noreferrer">
 								{location}
 							</a>
 						) : (
@@ -96,6 +96,7 @@ const UpcomingEvents = () => {
 				eventsList.map(e => {
 					return (
 						<IndividualEvent
+							key={Math.random()}
 							eventName={e.title}
 							start={e.start}
 							end={e.end}

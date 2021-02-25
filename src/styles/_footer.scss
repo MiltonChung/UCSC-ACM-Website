@@ -4,9 +4,7 @@
 	justify-content: center;
 	align-items: center;
 	margin-bottom: 1rem;
-	// position: absolute;
 	width: 100%;
-	// bottom: 0;
 
 	img {
 		width: 75px;
@@ -14,14 +12,20 @@
 		margin-bottom: 0.5rem;
 	}
 
+	p {
+		font-size: 17px;
+	}
+
 	&-socials {
 		display: flex;
 		align-items: flex-start;
-		margin-top: 0.5rem;
-		column-gap: 0.4rem;
+		margin-top: 0.8rem;
 		svg {
-			width: 25px;
+			width: 28px;
 			height: auto;
+		}
+		.linkedin {
+			margin: 0 0.8rem;
 		}
 	}
 }
