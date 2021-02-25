@@ -80,11 +80,11 @@ const RenderCarousel = () => {
 						</span>
 					</p>
 				</div>
-				<div className="window-card-button">
+				{/* <div className="window-card-button">
 					<a href="/" target="_blank" rel="noopener noreferrer" className="button">
 						Sign Up
 					</a>
-				</div>
+				</div> */}
 			</article>
 
 			<article className="window-card">
@@ -218,11 +218,11 @@ const RenderWindows = () => {
 						</span>
 					</p>
 				</div>
-				<div className="window-card-button">
+				{/* <div className="window-card-button">
 					<a href="/" target="_blank" rel="noopener noreferrer" className="button">
 						Sign Up
 					</a>
-				</div>
+				</div> */}
 			</article>
 
 			<article className="window-card">
